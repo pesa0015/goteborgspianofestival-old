@@ -1,0 +1,64 @@
+#footer {
+    padding-bottom: 50px;
+}
+#sponsors {
+    width: 800px;
+    margin: auto;
+    /*border-top: 1px solid #D9AFE9;*/
+}
+.sponsor {
+    display: inline-block;
+    margin: 0 30px 0 30px;
+}
+.only-text {
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+.sponsor img:not(#casio) {
+    width: 200px;
+}
+#casio {
+    width: 150px;
+    margin-top: 50px;
+}
+#mcv-logo {
+    margin-top: 50px;
+}
+#partners {
+    width: 80%;
+    margin: 0 auto -7px auto;
+    text-align: center;
+}
+.partner {
+    /*margin: 0 20px 0 20px;*/
+}
+.dot {
+    background: $secondaryColor;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin: 0 15px 0 15px;
+}
+#created-by {
+    text-align: center;
+    margin-top: 50px;
+}
+#created-by-title {
+    font-weight: 800;
+}
+#created-by {
+    span {
+        /*border-top: 1px solid #C0C0C0;*/
+        /*padding-top: 21px;*/
+        margin-top: 20px;
+    }
+}
+#created-by {
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,91 @@
+.day {
+    width: 33%;
+    display: inline-block;
+    float: left;
+    margin: 30px 0 30px 0;
+}
+.day:nth-child(3), .day:nth-child(4), .day:nth-child(6), .day:nth-child(7) {
+    border-left: 1px solid #C0C0C0;
+}
+.date {
+    font-size: 40px;
+    text-align: center;
+    margin: 30px;
+}
+.day-number {
+    font-weight: 800;
+    color: $thirdColor;
+    margin-right: 5px;
+    text-shadow: 1px 0px $thirdColorShadow;
+}
+.month {
+    
+}
+.activity-card {
+    margin: 15px 30px 15px 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $fourthColor;
+}
+.activity-card {
+    .left {
+        float: left;
+        margin-right: 30px;
+    }
+}
+.begins + div {
+    text-align: center;
+}
+.activity-card {
+    .right {
+        width: 65%;
+        display: inline-block;
+    }
+}
+.description {
+    font-weight: 800;
+    /*border-top: 1px solid #D9AFE9;*/
+    /*border-bottom: 1px solid #D9AFE9;*/
+    padding: 5px 0 5px 0;
+    margin: 5px 0 5px 0;
+}
+.activity {
+    font-weight: 800;
+}
+.activity {
+    img {
+        width: 25px;
+        vertical-align: middle;
+    }
+}
+.activity {
+    a {
+        text-decoration: none;
+        color: inherit;
+        vertical-align: middle;
+        transition: .5s;
+    }
+}
+.activity a:hover + .underline-dotted {
+    
+}
+.underline-dotted {
+    height: 2px;
+    border-bottom: 1px dotted #000000;
+    /*background: #000000;*/
+}
+.underline-description {
+    margin: -9px 0 7px 0;
+}
+.place {
+    font-weight: 800;
+    font-style: italic;
+    color: $thirdColor;
+}
+.black {
+    font-weight: 600;
+    color: #000000;
+}
+#activity-82 .description {
+    /*width: 180%;*/
+    /*margin-left: -120px;*/
+}

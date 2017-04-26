@@ -1,0 +1,130 @@
+@media (max-width: 700px) {
+    header, #wrapper {
+        margin-top: 0;
+    }
+    .md-modal {
+        width: 80%;
+    }
+    .md-content {
+        width: 100%;
+    }
+    #logo {
+        font-size: 17px;
+        padding: 15px;
+        margin: auto;
+    }
+    #note {
+        display: none;
+    }
+    #menu-icon {
+        width: 45px;
+        margin: 15px;
+    }
+    #menu-modal ul {
+        ul { font-size: 19px; }
+    }
+    #menu-modal {
+        img { width: 50px; }
+    }
+    .flexslider {
+        margin-bottom: 50px;
+    }
+    .flexslider {
+        height: 400px;
+    }
+    .flexslider {
+        .slides {
+            img {
+                height: 400px;
+            }
+        }
+    }
+    .flex-direction-nav a {
+        top: 60%;
+    }
+    #slider-title {
+        /*top: 13%;*/
+        top: 7%;
+    }
+    #slider-title, #places {
+        font-size: 20px;
+    }
+    #places {
+        span { display: block; }
+    }
+    #places {
+        #place-2 {
+            border-left: 0;
+            border-right: 0;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    #count-down {
+        margin-top: 5px;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .day {
+        width: 100%;
+    }
+    .day:nth-child(3), .day:nth-child(4), .day:nth-child(6), .day:nth-child(7) {
+        border-left: 0;
+    }
+    #wrapper-img {
+        height: 400px;
+    }
+    #wrapper-img {
+        .title {
+            margin: 190px 0 0 3%;
+            /*width: 100%;*/
+        }
+    }
+    #content {
+        width: 85%;
+    }
+    .pedagog {
+        width: 300px;
+    }
+    .pedagog {
+        img { width: 130px; }
+    }
+    .name {
+        font-size: 15px;
+    }
+    .pedagog {
+        p { margin-top: 70px; }
+    }
+    #sponsors {
+        width: 90%;
+    }
+    .sponsor {
+        margin: 30px 0 0 0;
+    }
+    #partners-title {
+        font-size: 25px;
+    }
+    #partners {
+        width: 90%;
+    }
+    .partner {
+        font-size: 16px;
+        display: block;
+    }
+    .dot {
+        border-radius: 0;
+        height: 2px;
+        display: block;
+        margin: 10px auto 10px auto;
+    }
+    #created-by-title {
+        display: block;
+    }
+    #board-page + #content h1 {
+        font-size: 17px;
+    }
+    textarea {
+        width: 90%;
+    }
+}

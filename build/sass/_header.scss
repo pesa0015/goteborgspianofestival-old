@@ -1,0 +1,133 @@
+header {
+    background: $primaryColor;
+    font-weight: 700;
+    width: 100%;
+    position: fixed;
+    border-bottom: 3px solid $secondaryColor;
+    margin-top: -103px;
+    z-index: 3;
+}
+#logo {
+    font-size: 25px;
+    display: inline-block;
+    padding: 20px 50px 20px 50px;
+    cursor: pointer;
+}
+#logo {
+    a {
+       color: inherit;
+       text-decoration: none;
+    }
+}
+#piano {
+    color: #5A5265;
+}
+#festival {
+    //color: #E1CFFD;
+}
+#when {
+    text-align: center;
+}
+header {
+    ul {
+        li {
+            a {
+                color: $nav-link-color;
+            }
+        }
+    }
+}
+#logo, #participate {
+    color: $nav-link-color;
+}
+#note {
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+}
+#flags {
+    display: inline-block;
+    cursor: pointer;
+}
+#flags {
+    img {
+       box-shadow: 1px 1px 1px #000000;
+       transition: .3s;
+    }
+}
+#flags {
+    img:first-child { margin-right: 10px; }
+}
+#flags {
+    img:hover { box-shadow: 1px 1px 5px #000000; }
+}
+header {
+    ul {
+        font-size: 17px;
+        list-style: none;
+        display: inline-block;
+        float: right;
+        margin: 20px 50px 20px 50px;
+        padding: 0;
+        line-height: 60px;
+    }
+}
+.menu-item {
+    display: inline-block;
+}
+header ul li a:not(.sub-link), #participate span {
+    text-decoration: none;
+    padding: 40px 20px 43px 20px;
+    transition: .1s;
+}
+header ul li a:hover, #participate span:hover, #participate li:hover, #young-pianists-span:hover {
+    background: $nav-link-hover-color;
+    //color: #5A5265;
+}
+#member a {
+    //margin: 0px 30px 0 30px;
+}
+#participate {
+    span { cursor: pointer; }
+}
+.sub {
+    ul {
+       background: #000000;
+       display: none;
+       position: absolute;
+       margin: 23px 0 0 0;
+    }
+}
+.sub span:hover + ul, .sub ul:hover {
+    display: block;
+}
+.sub {
+    ul {
+        li {
+            a {
+                display: block;
+                text-decoration: none;
+                padding: 10px 15px 10px 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+#young-pianists-span {
+    color: $nav-link-color;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    display: block;
+}
+#young-pianists {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    top: 45%;
+    border-left: 3px solid $secondaryColor;
+}
+#young-pianists-span:hover + #young-pianists, #young-pianists:hover {
+    display: block;
+}

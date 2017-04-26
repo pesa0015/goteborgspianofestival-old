@@ -1,0 +1,44 @@
+input[type=text], input[type=email], input[type=tel], textarea {
+    font-size: 20px;
+    width: 94%;
+    border: 0;
+    border-bottom: 1px solid $secondaryColor;
+    margin-top: 15px;
+    padding: 0 0 10px 3%;
+    outline: 0;
+    transition: .3s;
+}
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
+    border-bottom: 1px solid $nav-link-hover-color;
+}
+.md-content input[type=text]:focus, .md-content input[type=email]:focus, .md-content input[type=tel]:focus {
+    border-bottom: 5px solid $nav-link-hover-color;
+    padding-top: 10px;
+}
+textarea {
+    background: #F0E7FE;
+    border: 0;
+    padding: 3%;
+    width: 91%;
+    /*padding: 15px;*/
+    /*width: 95%;*/
+}
+textarea:focus {
+    background: $secondaryColor;
+}
+input[type=submit] {
+    background: transparent;
+    font-size: 20px;
+    color: $nav-link-hover-color;
+    border: 5px solid $secondaryColor;
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 10px 15px 10px 15px;
+    outline: 0;
+    cursor: pointer;
+    transition: .3s;
+}
+input[type=submit]:hover {
+    background: $secondaryColor;
+    color: #000000;
+}

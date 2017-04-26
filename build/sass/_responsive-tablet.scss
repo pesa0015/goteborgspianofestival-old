@@ -1,0 +1,26 @@
+@media (max-width: 1200px) and (min-width: 701px) {
+    #menu-icon {
+        width: 50px;
+        margin: 25px 50px 25px 0;
+    }
+    #menu-modal {
+        ul { font-size: 30px; }
+    }
+    #menu-modal {
+        ul {
+            li {
+                margin: 5px 0 5px 0;
+                padding: 20px 0 20px 0;
+            }
+        }
+    }
+    #sponsors {
+        width: 700px;
+    }
+    .sponsor {
+        margin: 50px 0 0 0;
+    }
+    #partners {
+        width: 700px;
+    }
+}

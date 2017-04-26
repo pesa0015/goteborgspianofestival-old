@@ -1,0 +1,10 @@
+$('.wpcf7-submit').val(t[lang].submit);
+$('.name-input').text(t[lang].your_name);
+$('.age').text(t[lang].age);
+$('.email').text(t[lang].email);
+$('.tel').text(t[lang].tel);
+$('.subject').text(t[lang].subject);
+$('.message').text(t[lang].message);
+$('.name-of-teacher').text(t[lang].name_of_teacher);
+$('.tel-of-teacher').text(t[lang].tel_of_teacher);
+$('.about-you').text(t[lang].about_you);
