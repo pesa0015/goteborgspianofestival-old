@@ -16,6 +16,7 @@ $translate = array(
     'signup_children' => 'Barn och unga 6+',
     'signup_adults' => 'Högre nivå',
     'management_board' => 'Styrelsen',
+    'signup_volonteers' => 'Bli volontär!',
     'management_board_link' => 'styrelsen',
     'contact' => 'Kontakt',
 

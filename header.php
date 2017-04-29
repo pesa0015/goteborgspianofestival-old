@@ -77,6 +77,12 @@ $logo .= '<div id="when">' . $begins . ' - ' . $ends . ' ' . $translate['august'
             <?php echo do_shortcode('[contact-form-7 title="Anmälan - Folk-Högskolenivå"]'); ?>
         </div>
     </div>
+    <div id="modal-signup-volonteers" class="md-modal md-effect-1">
+        <div class="md-content">
+            <button class="close-modal">Stäng</button>
+            <?php echo do_shortcode('[contact-form-7 title="Anmälan - Volontärer"]'); ?>
+        </div>
+    </div>
     <div id="modal-contact" class="md-modal md-effect-1">
         <div class="md-content">
             <button class="close-modal">Stäng</button>
@@ -160,6 +166,9 @@ $logo .= '<div id="when">' . $begins . ' - ' . $ends . ' ' . $translate['august'
                 <li id="participate" class="sub menu-item">
                     <span><?=$translate['signup']; ?></span>
                     <ul id="signup">
+                        <li id="volonteers" class="open-modal" data-modal="signup-volonteers">
+                            <a href="#" class="sub-link"><?=$translate['signup_volonteers']; ?></a>
+                        </li>
                         <li id="children" class="open-modal" data-modal="signup-children">
                             <a href="#" class="sub-link"><?=$translate['signup_children']; ?></a>
                         </li>
