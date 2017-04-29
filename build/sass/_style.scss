@@ -124,7 +124,7 @@ body {
 	margin-top: 70px;
 }
 #days-left {
-	color: #AD8CBA;
+	color: $primaryColor;
 	text-shadow: 1px 0px $thirdColorShadow;
 }
 #days-left + div {
