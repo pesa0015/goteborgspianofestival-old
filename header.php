@@ -90,13 +90,13 @@ $logo .= '<div id="when">' . $begins . ' - ' . $ends . ' ' . $translate['august'
             <?php echo do_shortcode('[contact-form-7 title="Bli medlem"]'); ?>
         </div>
     </div>
-    <!-- <div id="modal-video" class="md-modal md-effect-1">
+    <div id="modal-video" class="md-modal md-effect-1">
         <div class="md-content">
-            <img src="<?php bloginfo('template_url'); ?>/video/close.png" id="video-close-btn" class="close-modal">
+            <img src="<?php bloginfo('template_url'); ?>/img/video/close.png" id="video-close-btn" class="close-modal">
             <div id="player"></div>
         </div>
     </div>
-     --><div class="md-overlay"></div>
+    <div class="md-overlay"></div>
     <header>
         <nav>
             <div id="logo">

@@ -16,19 +16,14 @@ require 'header.php';
         </ul>
     </div>
     <div id="slider-title" class="title">
-        <span><?=$translate['welcome']; ?><br />15 - 20 <?=$translate['august']; ?> 2017</span>
-        <div id="places">
-            <span id="place-1">Göteborgsoperan</span>
-            <span id="place-2">Artisten</span>
-            <span id="place-3">Världskulturmuseet</span>
-        </div>
-        <?php
-        $date = array('year' => $year, 'month' => 8, 'day' => $begins);
-        $difference = mktime(0, 0, 0, $date['month'], $date['day'], $date['year'], 0) - time();
-        ?>
-        <div id="count-down">
-            <div id="days-left"><?php echo floor($difference/60/60/24)+1; ?></div>
-            <div><?=$translate['days_left']; ?></div>
+        <span><?=$translate['welcome']; ?></span>
+        <br />
+        <span><?=$translate['back']; ?></span>
+        <br />
+        <span id="check-movie"><?=$translate['movie']; ?></span>
+        <div id="video-icon">
+            <img src="<?php bloginfo('template_url'); ?>/img/video/youtube.png" id="passive" alt="">
+            <img src="<?php bloginfo('template_url'); ?>/img/video/youtube-hover.png" id="hover" alt="">
         </div>
         <div id="bouncing-arrow" class="arrow bounce"></div>
     </div>
@@ -37,6 +32,7 @@ require 'header.php';
     <div class="title">
         <a href="<?php echo $download; ?>" id="pdf" target="_blank"><?php echo $translate['pdf']; ?></a>
     </div>
+</div>
 <?php
 $days = get_categories(array('parent_of' => 'Spelprogram', 'orderby' => 'name', 'order' => 'asc'));
 $c = array(

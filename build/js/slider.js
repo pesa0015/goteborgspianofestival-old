@@ -1,18 +1,6 @@
 $('.flexslider').flexslider({
    	animation: 'fade',
-    slideshowSpeed: 3000,
-    start: function(){
-        placeId = document.getElementsByClassName('flex-active-slide')[0].getAttribute('data-place');
-        document.getElementById('place-' + placeId).className = 'active-place';
-    },
-    before: function(){
-        placeId = document.getElementsByClassName('flex-active-slide')[0].getAttribute('data-place');
-        document.getElementById('place-' + placeId).className = '';
-    },
-    after: function(){
-        placeId = document.getElementsByClassName('flex-active-slide')[0].getAttribute('data-place');
-        document.getElementById('place-' + placeId).className = 'active-place';
-    }
+    slideshowSpeed: 3000
 });
 var theModal = document.getElementsByClassName('md-overlay')[0];
 var closeMenu = document.getElementById('close-menu');
