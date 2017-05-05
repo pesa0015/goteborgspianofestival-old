@@ -1,5 +1,7 @@
 <?php
 
+require 'page.php';
+
 add_filter('wp_default_scripts', 'remove_jquery');
 
 function remove_jquery(&$scripts)
