@@ -6,7 +6,7 @@ if (!isset($_SESSION['lang'])) {
 if ($_SESSION['lang'] == 'sv' || $_SESSION['lang'] == 'en') {
     require 'lang/' . $_SESSION['lang'] . '.php';
 }
-$pageId = 353;
+$pageId = PAGE_DATES;
 $year = get_field('year', $pageId);
 $begins = get_field('begins', $pageId);
 $ends = get_field('ends', $pageId);
