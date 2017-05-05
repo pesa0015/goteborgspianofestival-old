@@ -68,26 +68,26 @@ $logo .= '<div id="when">' . $begins . ' - ' . $ends . ' ' . $translate['august'
     <div id="modal-signup-children" class="md-modal md-effect-1">
         <div class="md-content">
             <button class="close-modal">Stäng</button>
-            <?php echo do_shortcode('[contact-form-7 title="Anmälan - Barn och unga"]'); ?>
+            <?php echo getForm('Anmälan - Barn och unga'); ?>
         </div>
     </div>
     <div id="modal-signup-adults" class="md-modal md-effect-1">
         <div class="md-content">
             <button class="close-modal">Stäng</button>
-            <?php echo do_shortcode('[contact-form-7 title="Anmälan - Folk-Högskolenivå"]'); ?>
+            <?php echo getForm('Anmälan - Folk-Högskolenivå'); ?>
         </div>
     </div>
     <div id="modal-contact" class="md-modal md-effect-1">
         <div class="md-content">
             <button class="close-modal">Stäng</button>
-            <?php echo do_shortcode('[contact-form-7 title="Kontakt"]'); ?>
+            <?php echo getForm('Kontakt'); ?>
         </div>
     </div>
     <div id="modal-member" class="md-modal md-effect-1">
         <div class="md-content">
             <button class="close-modal">Stäng</button>
             <?php echo $translate['member_info']; ?>
-            <?php echo do_shortcode('[contact-form-7 title="Bli medlem"]'); ?>
+            <?php echo getForm('Bli medlem'); ?>
         </div>
     </div>
     <!-- <div id="modal-video" class="md-modal md-effect-1">

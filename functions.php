@@ -11,3 +11,8 @@ function remove_jquery(&$scripts)
         $scripts->remove('jquery');
     }
 }
+
+function getForm($name)
+{
+    return do_shortcode('[contact-form-7 title="' . $name . ' (' . $_SESSION['lang'] . ')"]');
+}
