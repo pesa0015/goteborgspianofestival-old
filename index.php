@@ -1,5 +1,5 @@
 <?php
-require 'header.php';
+get_header();
 ?>
 <div id="start-background">
     <div class="flexslider">

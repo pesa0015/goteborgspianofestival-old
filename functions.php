@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+if (!isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+}
+if ($_SESSION['lang'] == 'sv' || $_SESSION['lang'] == 'en') {
+    require 'lang/' . $_SESSION['lang'] . '.php';
+}
 require 'page.php';
 
 add_filter('wp_default_scripts', 'remove_jquery');
