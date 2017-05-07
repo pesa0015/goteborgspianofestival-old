@@ -80,7 +80,7 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
     <div id="modal-signup-volonteers" class="md-modal md-effect-1">
         <div class="md-content">
             <button class="close-modal">Stäng</button>
-            <?php echo do_shortcode('[contact-form-7 title="Anmälan - Volontärer"]'); ?>
+            <?php echo getForm('Anmälan - Volontärer'); ?>
         </div>
     </div>
     <div id="modal-contact" class="md-modal md-effect-1">
