@@ -25,7 +25,7 @@ get_header();
             <span id="place-3">Världskulturmuseet</span>
         </div>
         <?php
-        $date = array('year' => $year, 'month' => 8, 'day' => $begins);
+        $date = array('year' => year(), 'month' => 8, 'day' => begins());
         $difference = mktime(0, 0, 0, $date['month'], $date['day'], $date['year'], 0) - time();
         ?>
         <div id="count-down">
