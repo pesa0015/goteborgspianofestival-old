@@ -18,7 +18,7 @@ require 'header.php';
     <div id="slider-title" class="title">
         <span><?=$translate['welcome']; ?></span>
         <br />
-        <span><?php echo $begins . ' - ' . $ends . ' ' . $translate['august'] . ' ' . $year; ?></span>
+        <span><?php echo begins() . ' - ' . ends() . ' ' . $translate['august'] . ' ' . year(); ?></span>
         <div id="places">
             <span id="place-1">Göteborgsoperan</span>
             <span id="place-2">Artisten</span>

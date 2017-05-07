@@ -7,14 +7,11 @@ if ($_SESSION['lang'] == 'sv' || $_SESSION['lang'] == 'en') {
     require 'lang/' . $_SESSION['lang'] . '.php';
 }
 $pageId = PAGE_DATES;
-$year = get_field('year', $pageId);
-$begins = get_field('begins', $pageId);
-$ends = get_field('ends', $pageId);
-$home = get_bloginfo('home');
+$home = home();
 $logo = ' <span id="piano">Piano</span>';
 $logo .= '<span id="festival">festival</span>';
 $logo .= '<br />';
-$logo .= '<div id="when">' . $begins . ' - ' . $ends . ' ' . $translate['august'] . ' 2017';
+$logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['august'] . ' ' . year();
 ?>
 <!DOCTYPE html>
 <html lang="en">
