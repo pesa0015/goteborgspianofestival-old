@@ -44,6 +44,9 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
                     <?php $text = $translate['signup_menu_adults']; ?>
                     <a href="#" class="open-modal" data-modal="signup-adults"><?php echo $text; ?></a>
                 </li>
+                <li id="volonteers" class="open-modal" data-modal="signup-volonteers">
+                    <a href="#" class="sub-link"><?=$translate['signup_volonteers']; ?></a>
+                </li>
                 <li>
                     <?php
                     $board_link = $translate['management_board_link'];
