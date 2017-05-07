@@ -96,13 +96,13 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
             <?php echo getForm('Bli medlem'); ?>
         </div>
     </div>
-    <!-- <div id="modal-video" class="md-modal md-effect-1">
+    <div id="modal-video" class="md-modal md-effect-1">
         <div class="md-content">
-            <img src="<?php bloginfo('template_url'); ?>/video/close.png" id="video-close-btn" class="close-modal">
+            <img src="<?php bloginfo('template_url'); ?>/img/video/close.png" id="video-close-btn" class="close-modal">
             <div id="player"></div>
         </div>
     </div>
-     --><div class="md-overlay"></div>
+    <div class="md-overlay"></div>
     <header>
         <nav>
             <div id="logo">
@@ -165,9 +165,6 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
                         </li>
                     </ul>
                 </li>
-                <li id="member" class="menu-item">
-                    <a href="#" class="open-modal" data-modal="member"><?=$translate['member']; ?></a>
-                </li>
                 <li id="participate" class="sub menu-item">
                     <span><?=$translate['signup']; ?></span>
                     <ul id="signup">
@@ -182,12 +179,27 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item">
-                    <?php $management_board = $home . '/' . $translate['management_board_link']; ?>
-                    <a href="<?php echo $management_board; ?>"><?=$translate['management_board']; ?></a>
+                <li id="media" class="sub menu-item">
+                    <span>Media</span>
+                    <ul>
+                        <li>
+                            <a href="#" id="open-video" class="sub-link">Video Pianofestival 2016</a>
+                        </li>
+                    </ul>
                 </li>
-                <li class="menu-item">
-                    <a href="#" class="open-modal" data-modal="contact"><?=$translate['contact']; ?></a>
+                <li id="more" class="sub menu-item">
+                    <span>Mer <img src="<?php bloginfo('template_url'); ?>/img/more.png" alt=""></span>
+                    <ul>
+                        <li>
+                            <a href="#" class="sub-link open-modal" data-modal="contact">Kontakt</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sub-link open-modal" data-modal="member">Bli medlem</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sub-link">Styrelsen</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
