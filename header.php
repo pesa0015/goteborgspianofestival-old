@@ -112,49 +112,54 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
             <img src="<?php bloginfo('template_url'); ?>/img/menu.png" id="menu-icon" class="only-mobile" alt="">
             <ul>
                 <li class="menu-item"><a href="<?php bloginfo('home'); ?>"><?=$translate['home']; ?></a></li>
-                    <li class="sub menu-item">
+                <li class="sub menu-item">
                     <span>
                         <?php $p = $home . '/#festivalprogram'; ?>
                         <a href="<?php echo $p; ?>" class="go"><?=$translate['festivalprogram']; ?></a>
                     </span>
                     <ul>
                         <li>
-                            <a href="<?php echo $home; ?>/pedagoger" class="sub-link"><?=$translate['pedagoger']; ?></a>
-                        </li>
-                        <li>
-                            <?php $musik = $home . '/sagornas-musik'; ?>
-                            <a href="<?php echo $musik; ?>" class="sub-link"><?=$translate['sagornas_musik']; ?></a>
-                        </li>
-                        <li>
-                            <?php $games = $home . '/pedagoger/#magdalena-prahl'; ?>
-                            <a href="<?php echo $games; ?>" class="sub-link">Music Mind Games</a>
-                        </li>
-                        <li><span id="young-pianists-span">Unga och lovande pianister</span>
-                            <ul id="young-pianists">
+                            <span id="year-2016">Festivalprogram 2016</span>
+                            <ul id="program-2016">
                                 <li>
-                                    <?php
-                                    $part1 = $home . '/unga-och-lovande-pianister-del-1';
-                                    $text = $translate['unga_lovande_pianister'];
-                                    ?>
-                                    <a href="<?php echo $part1; ?>" class="sub-link"><?php echo $text; ?> 1</a>
+                                    <a href="<?php echo $home; ?>/pedagoger" class="sub-link"><?=$translate['pedagoger']; ?></a>
                                 </li>
                                 <li>
-                                    <?php $part2 = $home . '/unga-och-lovande-pianister-del-2'; ?>
-                                    <a href="<?php echo $part2; ?>" class="sub-link"><?php echo $text; ?> 2</a>
+                                    <?php $musik = $home . '/sagornas-musik'; ?>
+                                    <a href="<?php echo $musik; ?>" class="sub-link"><?=$translate['sagornas_musik']; ?></a>
                                 </li>
                                 <li>
-                                    <?php $part3 = $home . '/unga-och-lovande-pianister-del-3'; ?>
-                                    <a href="<?php echo $part3; ?>" class="sub-link"><?php echo $text; ?> 3</a>
+                                    <?php $games = $home . '/pedagoger/#magdalena-prahl'; ?>
+                                    <a href="<?php echo $games; ?>" class="sub-link">Music Mind Games</a>
                                 </li>
+                                <li><span id="young-pianists-span">Unga och lovande pianister</span>
+                                    <ul id="young-pianists">
+                                        <li>
+                                            <?php
+                                            $part1 = $home . '/unga-och-lovande-pianister-del-1';
+                                            $text = $translate['part'];
+                                            ?>
+                                            <a href="<?php echo $part1; ?>" class="sub-link"><?php echo $text; ?> 1</a>
+                                        </li>
+                                        <li>
+                                            <?php $part2 = $home . '/unga-och-lovande-pianister-del-2'; ?>
+                                            <a href="<?php echo $part2; ?>" class="sub-link"><?php echo $text; ?> 2</a>
+                                        </li>
+                                        <li>
+                                            <?php $part3 = $home . '/unga-och-lovande-pianister-del-3'; ?>
+                                            <a href="<?php echo $part3; ?>" class="sub-link"><?php echo $text; ?> 3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <?php
+                                $concert = $home . '/konsert-med-goteborgs-pianosallskap';
+                                $concert_text = $translate['konsert_göteborgs_pianosällskap'];
+                                ?>
+                                <li><a href="<?php echo $concert; ?>" class="sub-link"><?php echo $concert_text; ?></a></li>
+                                <li><a href="<?php bloginfo('home'); ?>/maratonkonsert" class="sub-link">Maratonkonsert</a></li>
+                                <li><a href="<?php bloginfo('home'); ?>/finalkonsert" class="sub-link">Finalkonsert</a></li>
                             </ul>
                         </li>
-                        <?php
-                        $concert = $home . '/konsert-med-goteborgs-pianosallskap';
-                        $concert_text = $translate['konsert_göteborgs_pianosällskap'];
-                        ?>
-                        <li><a href="<?php echo $concert; ?>" class="sub-link"><?php echo $concert_text; ?></a></li>
-                        <li><a href="<?php bloginfo('home'); ?>/maratonkonsert" class="sub-link">Maratonkonsert</a></li>
-                        <li><a href="<?php bloginfo('home'); ?>/finalkonsert" class="sub-link">Finalkonsert</a></li>
                     </ul>
                 </li>
                 <li id="member" class="menu-item">

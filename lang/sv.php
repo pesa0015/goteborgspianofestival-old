@@ -8,6 +8,7 @@ $translate = array(
     'pedagoger' => 'Pedagoger',
     'sagornas_musik' => 'Sagornas Musik',
     'unga_lovande_pianister' => 'Unga och lovande pianister - del',
+    'part' => 'Del',
     'konsert_göteborgs_pianosällskap' => 'Konsert med Göteborgs Pianosällskap',
     'member' => 'Medlem',
     'signup' => 'Anmälan',
