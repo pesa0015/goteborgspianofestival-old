@@ -39,3 +39,42 @@ function getForm($name)
 {
     return do_shortcode('[contact-form-7 title="' . $name . ' (' . $_SESSION['lang'] . ')"]');
 }
+
+// Only if on translation page
+// if (is_admin()) {
+//     add_action('admin_enqueue_scripts', 'load_admin_style');
+// }
+function load_admin_style() {
+    // $bootstrapCss = '/bootstrap.min.css';
+    // wp_enqueue_style('bootstrap', $bootstrapCss);
+    // wp_enqueue_style('style', get_template_directory_uri() . '/style.min.css');
+    // wp_enqueue_style( 'admin_css' );
+}
+
+add_action('admin_bar_menu', 'linked_url', 80);
+function linked_url($wp_admin_bar) {
+    $args = array(
+        'id' => 'translate',
+        'title' => 'Översätt',
+        'href' => get_admin_url() . 'options-general.php?page=translate'
+    );
+    $wp_admin_bar->add_menu($args);
+}
+
+/** Step 2 (from text above). */
+add_action('admin_menu', 'my_plugin_menu');
+
+/** Step 1. */
+function my_plugin_menu() {
+    add_options_page('My Plugin Options', 'My Plugin', 'manage_options', 'translate', 'my_plugin_options');
+}
+
+/** Step 3. */
+function my_plugin_options() {
+    if (!current_user_can('manage_options'))  {
+        wp_die(__('You do not have sufficient permissions to access this page.'));
+    }
+    global $wpdb;
+    $translations = $wpdb->get_results('SELECT * FROM translations;', OBJECT);
+    require 'lang/translate.php';
+}
