@@ -2,7 +2,7 @@
 
 /* Template Name: pdf */
 
-$pdf = get_field('pdf', 347);
+$pdf = get_field('pdf', PAGE_PDF);
 
 header('Content-type:application/pdf');
 header('Content-Disposition:inline;filename=festivalprogram.pdf');
