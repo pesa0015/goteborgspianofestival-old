@@ -23,11 +23,12 @@ textarea {
     border: 0;
     padding: 3%;
     width: 91%;
+    height: 100px;
     /*padding: 15px;*/
     /*width: 95%;*/
 }
 textarea:focus {
-    background: $secondaryColor;
+    background: #D8CFE4;
 }
 input[type=submit] {
     background: transparent;
