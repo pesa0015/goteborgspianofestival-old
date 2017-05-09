@@ -34,6 +34,9 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
                     <a href="" class="go-to-program"><?=$translate['festivalprogram']; ?></a>
                 </li>
                 <li>
+                    <a href="#" class="sub-link open-video">Video <img src="<?php bloginfo('template_url'); ?>/img/video/youtube.png" alt=""></a>
+                </li>
+                <li>
                     <a href="#" class="open-modal" data-modal="member"><?=$translate['member']; ?></a>
                 </li>
                 <li>
@@ -183,7 +186,7 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
                     <span>Media</span>
                     <ul>
                         <li>
-                            <a href="#" id="open-video" class="sub-link">Video Pianofestival 2016</a>
+                            <a href="#" class="sub-link open-video">Video Pianofestival 2016</a>
                         </li>
                     </ul>
                 </li>

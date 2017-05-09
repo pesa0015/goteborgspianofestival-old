@@ -25,6 +25,7 @@ $(video).click(function(){
   $('.flexslider').pause();
 });
 var videoModal = document.getElementById('modal-video');
-document.getElementById('open-video').onclick = function() {
+$('.open-video').click(function(e) {
   showModal(videoModal, true, true, false, true);
-}
+  e.preventDefault();
+});

@@ -61,6 +61,16 @@
         display: block;
         margin: auto;
     }
+    #menu-modal {
+        .open-video {
+            img {
+                width: 30px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+        }
+    }
     #bouncing-arrow {
         display: none;
     }
