@@ -25,7 +25,7 @@ get_header();
             <span id="place-3">Världskulturmuseet</span>
         </div>
         <?php
-        $date = array('year' => $year, 'month' => 8, 'day' => $begins);
+        $date = array('year' => year(), 'month' => 8, 'day' => begins());
         $difference = mktime(0, 0, 0, $date['month'], $date['day'], $date['year'], 0) - time();
         ?>
         <div id="count-down">
@@ -37,66 +37,8 @@ get_header();
 </div>
 <div id="festivalprogram_anchor">
     <div class="title">
-        <a href="<?php echo $download; ?>" id="pdf" target="_blank"><?php echo $translate['pdf']; ?></a>
+        <h4><?php echo $translate['comes_soon']; ?></h4>
     </div>
-<?php
-$days = get_categories(array('parent_of' => 'Spelprogram', 'orderby' => 'name', 'order' => 'asc'));
-$c = array(
-    'Pressmeddelanden',
-    'Spelprogram',
-    'Pedagoger',
-    'Sagornas Musik',
-    'Finalkonsert',
-    'Unga och lovande pianister del 1',
-    'Unga och lovande pianister del 2',
-    'Unga och lovande pianister del 3',
-    'Konsert med Göteborgs Pianosällskap'
-);
-foreach ($days as $day) :
-    if (!in_array($day->name, $c)) : ?>
-<div class="day">
-    <div class="date">
-        <span class="day-number"><?php echo $day->name; ?></span><span class="month">Augusti</span></h3>
-    </div>
-<?php
-$activities = get_posts(array('cat' => $day->cat_ID, 'numberposts' => 0, 'orderby' => 'menu_order', 'order' => 'desc'));
-foreach ($activities as $activity) :
-    $id = $activity->ID; ?>
-<div id="activity-<?php echo $id; ?>" class="activity-card">
-    <div class="left">
-        <span class="begins"><?php the_field('begins', $id); ?> - </span>
-        <span class="ends"><?php the_field('ends', $id); ?></span>
-    </div>
-    <div class="right">
-        <?php if (get_field('page_link', $id)) : ?>
-        <div class="activity">
-            <?php if (get_field('anchor', $id)) :
-                $anchor = get_field('anchor', $id);
-                $page_link = get_field('page_link', $id) . '#' . substr($anchor, 34, -1);
-                $a = get_field('activity', $id); ?>
-                <a href="<?php echo $page_link; ?>" class="tooltip" title="Läs mer" target="_blank"><?php $a; ?></a>
-            <?php else :
-                $link = get_field('page_link', $id);
-                $a = get_field('activity', $id); ?>
-                <a href="<?php echo $link; ?>" class="tooltip" title="Läs mer" target="_blank"><?php echo $a; ?></a>
-            <?php endif; ?>
-            <div class="underline-dotted"></div>
-        </div>
-        <?php else : ?>
-        <div class="activity"><?php the_field('activity', $id); ?></div>
-        <?php endif; ?>
-        <?php if (get_field('description_' . $_SESSION['lang'], $id)) : ?>
-        <div class="description"><?php the_field('description_' . $_SESSION['lang'], $id); ?></div>
-        <?php endif; ?>
-        <div class="place"><?php the_field('place', $id); ?></div>
-    </div>
-</div>
-<?php endforeach; ?>
-</div>
-<?php
-    endif;
-    endforeach;
-?>
 </div>
 <div id="footer">
     <h1 id="sponsors-title" class="title">Sponsorer</h1>

@@ -21,6 +21,8 @@ $translate = array(
     'management_board_link' => 'management-board',
     'contact' => 'Contact',
 
+    'comes_soon' => 'Festivalprogram soon available',
+
     // management board-page
     'board' => 'Board of association',
     'boss' => 'Chairperson & Artistic Director',

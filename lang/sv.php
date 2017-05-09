@@ -21,6 +21,8 @@ $translate = array(
     'management_board_link' => 'styrelsen',
     'contact' => 'Kontakt',
 
+    'comes_soon' => 'Festivalprogram kommer snart',
+
     // management board-page
     'board' => 'Föreningens styrelse',
     'boss' => 'Ordförande & Konstnärlig ledare',
