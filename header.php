@@ -200,7 +200,8 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
                             <a href="#" class="sub-link open-modal" data-modal="member">Bli medlem</a>
                         </li>
                         <li>
-                            <a href="#" class="sub-link">Styrelsen</a>
+                            <?php $management_board = $home . '/' . $translate['management_board_link']; ?>
+                            <a href="<?php echo $management_board; ?>"><?=$translate['management_board']; ?></a>
                         </li>
                     </ul>
                 </li>
