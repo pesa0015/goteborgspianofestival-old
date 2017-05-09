@@ -201,7 +201,7 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
                         </li>
                         <li>
                             <?php $management_board = $home . '/' . $translate['management_board_link']; ?>
-                            <a href="<?php echo $management_board; ?>"><?=$translate['management_board']; ?></a>
+                            <a href="<?php echo $management_board; ?>" class="sub-link"><?=$translate['management_board']; ?></a>
                         </li>
                     </ul>
                 </li>
