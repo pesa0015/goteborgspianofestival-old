@@ -40,17 +40,6 @@ function getForm($name)
     return do_shortcode('[contact-form-7 title="' . $name . ' (' . $_SESSION['lang'] . ')"]');
 }
 
-// Only if on translation page
-// if (is_admin()) {
-//     add_action('admin_enqueue_scripts', 'load_admin_style');
-// }
-function load_admin_style() {
-    // $bootstrapCss = '/bootstrap.min.css';
-    // wp_enqueue_style('bootstrap', $bootstrapCss);
-    // wp_enqueue_style('style', get_template_directory_uri() . '/style.min.css');
-    // wp_enqueue_style( 'admin_css' );
-}
-
 add_action('admin_bar_menu', 'linked_url', 80);
 function linked_url($wp_admin_bar) {
     $args = array(

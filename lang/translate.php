@@ -1,3 +1,19 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    .btn-info.btn-outline {
+    outline: 0;
+    }
+    .btn-info.btn-outline:hover {
+        outline: 0;
+    }
+    .active {
+        opacity: 1;
+        transition: .5s;
+    }
+    .not-active {
+        opacity: .3;
+    }
+</style>
 <h1>Översätt</h1>
 <br />
 <table class="table table-hover">
