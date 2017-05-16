@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="//cdn.quilljs.com/1.2.4/quill.snow.css" rel="stylesheet">
 <style>
     .btn-info.btn-outline {
     outline: 0;
@@ -38,6 +39,7 @@
 <?php endforeach; ?>
     </tbody>
 </table>
+<script src="//cdn.quilljs.com/1.2.4/quill.min.js"></script>
 <script>
     jQuery('.btn').click(function(e) {
         var current = e.target.getAttribute('data-id');
