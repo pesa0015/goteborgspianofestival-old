@@ -44,6 +44,10 @@ get_header();
     <h1 id="sponsors-title" class="title">Sponsorer</h1>
     <div id="sponsors">
         <div class="sponsors">
+            <div class="sponsor only-text" style="margin: 0 0 50px 30px;">
+                <span>Odd Fellow logen nr. 69 Lennart Torstenson</span>
+            </div>
+            <br />
             <div class="sponsor">
                 <a href="http://goteborgco.se/" target="_blank">
                     <img src="<?php bloginfo('template_url'); ?>/img/sponsors/gbgco.png" alt="">
