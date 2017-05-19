@@ -67,3 +67,61 @@ function my_plugin_options() {
     $translations = $wpdb->get_results('SELECT * FROM translations;', OBJECT);
     require 'lang/translate.php';
 }
+
+add_action('wp_ajax_custom_translate', 'custom_translate');
+
+function custom_translate() {
+    $table = 'translations';
+    $sql = "CREATE TABLE IF NOT EXISTS `$table` (
+            `id` int(3) NOT NULL,
+              `name` varchar(3000) DEFAULT NULL,
+              `description` varchar(3000) DEFAULT NULL,
+              `sv` varchar(3000) DEFAULT NULL,
+              `en` varchar(3000) DEFAULT NULL,
+              `created_at` datetime DEFAULT NULL,
+              `updated_at` datetime DEFAULT NULL,
+              PRIMARY KEY (id)
+            ) ENGINE = InnoDB;";
+    global $wpdb;
+    $wpdb->query($sql);
+    $id = (int) $_POST['id'];
+    $translationTableExists = $wpdb->get_results('SELECT id FROM ' . $table . ' WHERE id = ' . $id, OBJECT);
+    if ($translationTableExists) {
+        $result = $wpdb->update(
+            $table,
+            array(
+                'name' => $_POST['name'],
+                'description' => $_POST['description'],
+                'sv' => $_POST['sv'],
+                'en' => $_POST['en'],
+                'updated_at' => current_time('mysql')
+            ),
+            array(
+                'id' => $_POST['id']
+            )
+        );
+
+        if ($result > 0) {
+            $response = array('success' => true, 'id' => $id);
+            wp_send_json_success($response);
+        } else {
+            $response = array('error' => $wpdb->last_query);
+            wp_send_json_success($response);
+        }
+    } else {
+        $wpdb->insert(
+            $table,
+            array(
+                'name' => $_POST['name'],
+                'description' => $_POST['description'],
+                'sv' => $_POST['sv'],
+                'en' => $_POST['en'],
+                'created_at' => current_time('mysql'),
+                'updated_at' => current_time('mysql')
+            )
+        );
+
+        $response = array('success' => true, 'id' => $wpdb->insert_id);
+        wp_send_json_success($response);
+    }
+}
