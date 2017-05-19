@@ -1,5 +1,6 @@
 <?php
 get_header();
+$translate = getTranslations();
 ?>
 <div id="start-background">
     <div class="flexslider">

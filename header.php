@@ -3,9 +3,7 @@ session_start();
 if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 }
-if ($_SESSION['lang'] == 'sv' || $_SESSION['lang'] == 'en') {
-    require 'lang/' . $_SESSION['lang'] . '.php';
-}
+$translate = getTranslations();
 $pageId = PAGE_DATES;
 $home = home();
 $logo = ' <span id="piano">Piano</span>';
@@ -28,7 +26,7 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
         <div class="md-content">
             <ul>
                 <li>
-                    <a href="<?php bloginfo('home'); ?>"><?=$translate['home']; ?></a>
+                    <a href="<?php bloginfo('home'); ?>"><?=str_replace(['<p>', '</p>'], '', $translate['home']); ?></a>
                 </li>
                 <li>
                     <a href="" class="go-to-program"><?=$translate['festivalprogram']; ?></a>
@@ -117,7 +115,7 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
             </div>
             <img src="<?php bloginfo('template_url'); ?>/img/menu.png" id="menu-icon" class="only-mobile" alt="">
             <ul>
-                <li class="menu-item"><a href="<?php bloginfo('home'); ?>"><?=$translate['home']; ?></a></li>
+                <li class="menu-item"><a href="<?php bloginfo('home'); ?>"><?=str_replace(['<p>', '</p>'], '', $translate['home']); ?></a></li>
                 <li class="sub menu-item">
                     <span>
                         <?php $p = $home . '/#festivalprogram'; ?>

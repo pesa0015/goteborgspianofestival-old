@@ -4,8 +4,15 @@ session_start();
 if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 }
-if ($_SESSION['lang'] == 'sv' || $_SESSION['lang'] == 'en') {
-    require 'lang/' . $_SESSION['lang'] . '.php';
+function getTranslations() {
+    global $wpdb;
+    $translations = $wpdb->get_results('SELECT name, ' . $_SESSION['lang'] . ' FROM translations', OBJECT_K);
+    $translate = array();
+    foreach ($translations as $name => $text) {
+        $value = (array) $text;
+        $translate[$name] = $value[$_SESSION['lang']];
+    }
+    return $translate;
 }
 require 'page.php';
 
