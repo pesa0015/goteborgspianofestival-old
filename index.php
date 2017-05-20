@@ -26,11 +26,12 @@ $translate = getTranslations();
             <span id="place-3">Världskulturmuseet</span>
         </div>
         <?php
-        $date = array('year' => year(), 'month' => 8, 'day' => begins());
-        $difference = mktime(0, 0, 0, $date['month'], $date['day'], $date['year'], 0) - time();
+        $today = new DateTime(date('Y-m-d'));
+        $start = new DateTime(year() . '-08-' . begins());
+        $days = $today->diff($start);
         ?>
         <div id="count-down">
-            <div id="days-left"><?php echo floor($difference/60/60/24)+1; ?></div>
+            <div id="days-left"><?php echo $days->format('%a'); ?></div>
             <div><?=$translate['days_left']; ?></div>
         </div>
         <div id="bouncing-arrow" class="arrow bounce"></div>
