@@ -1,0 +1,35 @@
+.btn-info.btn-outline {
+    outline: 0;
+}
+.btn-info.btn-outline:hover {
+    outline: 0;
+}
+.active {
+    opacity: 1;
+    transition: .5s;
+}
+.not-active {
+    opacity: .3;
+}
+.content {
+    display: none;
+}
+#translate-modal {
+    width: 700px;
+}
+.md-content {
+    background: #FFFFFF;
+    color: #000000;
+    padding: 20px;
+}
+.md-content .btn {
+    display: inline-block;
+    margin: 30px 0 10px 0;
+}
+.text-label {
+    font-weight: 600;
+    margin: 30px 0 10px 0;
+}
+.text {
+
+}
