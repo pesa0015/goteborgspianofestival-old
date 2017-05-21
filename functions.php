@@ -10,7 +10,7 @@ function getTranslations() {
     $translate = array();
     foreach ($translations as $name => $text) {
         $value = (array) $text;
-        $translate[$name] = $value[$_SESSION['lang']];
+        $translate[$name] = str_replace(['<p>', '</p>'], '', $value[$_SESSION['lang']]);
     }
     return $translate;
 }
