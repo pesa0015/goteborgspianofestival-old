@@ -39,7 +39,7 @@ gulp.task('vendor-js', function() {
 
 gulp.task('vendor-css', function() {
     return gulp.src(['vendor/*/css/*.min.css', 'css/dist.min.css'])
-        .pipe(concat('style.min.css'))
+        .pipe(concat('style.css'))
         .pipe(gulp.dest('.'));
 });
 

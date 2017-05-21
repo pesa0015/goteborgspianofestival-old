@@ -17,7 +17,7 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
     <title>Göteborgs Pianofestival</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_url'); ?>/style.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_url'); ?>/style.css" />
     <?php wp_head(); ?>
 </head>
 <body>
