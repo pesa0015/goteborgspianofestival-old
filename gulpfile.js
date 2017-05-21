@@ -38,7 +38,7 @@ gulp.task('vendor-js', function() {
 });
 
 gulp.task('vendor-css', function() {
-    return gulp.src(['vendor/*/css/*.min.css', 'css/dist.min.css'])
+    return gulp.src(['vendor/*/css/*.min.css', '!vendor/bootstrap/css/*.min.css', '!vendor/quill/css/*.min.css', 'css/dist.min.css'])
         .pipe(concat('style.css'))
         .pipe(gulp.dest('.'));
 });
