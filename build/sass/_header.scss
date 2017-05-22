@@ -57,10 +57,17 @@ header {
     }
 }
 #flags {
-    img:first-child { margin-right: 10px; }
+    img {
+        width: 30px;
+        border: 1px solid $secondaryColor;
+        border-radius: 5px;
+        position: absolute;
+        top: 40%;
+        left: 30%;
+    }
 }
 #flags {
-    img:hover { box-shadow: 1px 1px 5px #000000; }
+    img:hover { box-shadow: 1px 1px 5px $secondaryColor; }
 }
 header {
     ul {
@@ -68,7 +75,7 @@ header {
         list-style: none;
         display: inline-block;
         float: right;
-        margin: 20px 200px 20px 50px;
+        margin: 20px 10% 20px 50px;
         padding: 0;
         line-height: 60px;
     }

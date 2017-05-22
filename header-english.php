@@ -1,9 +1,9 @@
 <?php
 session_start();
 if (!isset($_SESSION['lang'])) {
-    $_SESSION['lang'] = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-} elseif ($_SESSION['lang'] !== 'sv') {
-    $_SESSION['lang'] = 'sv';
+    $_SESSION['lang'] = 'en';
+} elseif ($_SESSION['lang'] !== 'en') {
+    $_SESSION['lang'] = 'en';
 }
 $translate = getTranslations();
 $pageId = PAGE_DATES;
@@ -63,8 +63,8 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
             </ul>
         </div>
         <div id="flags-menu">
-            <a href="<?php echo $home; ?>/english">
-                <img src="<?php bloginfo('template_url'); ?>/img/flags/en.png" alt="">
+            <a href="<?php echo $home; ?>">
+                <img src="<?php bloginfo('template_url'); ?>/img/flags/sv.png" alt="">
             </a>
         </div>
         <img src="<?php bloginfo('template_url'); ?>/img/close.png" id="close-menu" class="close-modal" alt="">
@@ -110,16 +110,16 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
     <header>
         <nav>
             <div id="logo">
-                <a href="<?php bloginfo('home'); ?>/english"><?=$translate['gothenburg'] . $logo; ?></div></a>
+                <a href="<?php bloginfo('home'); ?>"><?=$translate['gothenburg'] . $logo; ?></div></a>
             </div>
             <div id="flags">
-                <a href="<?php echo $home; ?>/english">
-                    <img src="<?php bloginfo('template_url'); ?>/img/flags/en.png" class="flag" data-lang="en" alt="">
+                <a href="<?php echo $home; ?>">
+                    <img src="<?php bloginfo('template_url'); ?>/img/flags/sv.png" class="flag" data-lang="sv" alt="">
                 </a>
             </div>
             <img src="<?php bloginfo('template_url'); ?>/img/menu.png" id="menu-icon" class="only-mobile" alt="">
             <ul>
-                <li class="menu-item"><a href="<?php bloginfo('home'); ?>"><?=$translate['home']; ?></a></li>
+                <li class="menu-item"><a href="<?php bloginfo('home'); ?>"><?=str_replace(['<p>', '</p>'], '', $translate['home']); ?></a></li>
                 <li class="sub menu-item">
                     <span>
                         <?php $p = $home . '/#festivalprogram'; ?>
