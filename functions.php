@@ -92,8 +92,8 @@ function custom_translate() {
     global $wpdb;
     $wpdb->query($sql);
     $id = (int) $_POST['id'];
-    $translationTableExists = $wpdb->get_results('SELECT id FROM ' . $table . ' WHERE id = ' . $id, OBJECT);
-    if ($translationTableExists) {
+    $translationRowExists = $wpdb->get_results('SELECT id FROM ' . $table . ' WHERE id = ' . $id, OBJECT);
+    if ($translationRowExists) {
         $result = $wpdb->update(
             $table,
             array(
