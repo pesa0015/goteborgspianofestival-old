@@ -49,7 +49,7 @@ gulp.task('watch', function() {
     watch('lang/build/style.css', function() {
         runSequence('css', 'vendor-css');
     });
-    watch('build/js/*.js', function() {
+    watch('lang/build/script.js', function() {
         runSequence('js', 'vendor-js');
     });
 });
