@@ -1,6 +1,8 @@
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-translate.min.css">
 <h1>Översätt</h1>
 <br />
+<button type="button" class="btn btn-info btn-outline" data-id="0">Lägg till</button>
+<hr />
 <table class="table table-hover">
     <thead>
         <tr>

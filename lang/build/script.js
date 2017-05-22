@@ -6,6 +6,16 @@ function closeModal() {
 }
 jQuery('.btn-info').click(function(e) {
     var current = e.target.getAttribute('data-id');
+    if (current == 0) {
+        document.getElementById('translation_id').value = current;
+        jQuery('.ql-toolbar').remove();
+        jQuery('#sv').html();
+        jQuery('#en').html();
+        var sv = new Quill('#sv', {theme: 'snow'});
+        var en = new Quill('#en', {theme: 'snow'});
+        showModal();
+        return true;
+    }
     var clickedRow = document.getElementById('row-' + current);
     if (clickedRow.className === 'table-row active') {
         jQuery('.table-row').removeClass('active not-active');
@@ -41,6 +51,10 @@ jQuery('#translate-modal .btn-success').click(function() {
     jQuery.post(ajaxurl, data, function(response) {
         if (response.success) {
             var id = response.data.id;
+            if (response.data.newRow) {
+                window.location.reload();
+                return true;
+            }
             document.getElementById('sv-' + id).innerHTML = sv;
             document.getElementById('en-' + id).innerHTML = en;
             document.getElementById('preview-sv-' + id).innerHTML = sv.replace(

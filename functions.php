@@ -109,7 +109,7 @@ function custom_translate() {
         );
 
         if ($result > 0) {
-            $response = array('success' => true, 'id' => $id);
+            $response = array('success' => true, 'id' => $id, 'newRow' => false);
             wp_send_json_success($response);
         } else {
             $response = array('error' => $wpdb->last_query);
@@ -128,7 +128,7 @@ function custom_translate() {
             )
         );
 
-        $response = array('success' => true, 'id' => $wpdb->insert_id);
+        $response = array('success' => true, 'id' => $wpdb->insert_id, 'newRow' => true);
         wp_send_json_success($response);
     }
 }
