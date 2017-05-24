@@ -110,7 +110,7 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
     <header>
         <nav>
             <div id="logo">
-                <a href="<?php bloginfo('home'); ?>/english"><?=$translate['gothenburg'] . $logo; ?></div></a>
+                <a href="<?php bloginfo('home'); ?>"><?=$translate['gothenburg'] . $logo; ?></div></a>
             </div>
             <div id="flags">
                 <a href="<?php echo $home; ?>/english">

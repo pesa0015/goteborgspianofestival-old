@@ -110,7 +110,7 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
     <header>
         <nav>
             <div id="logo">
-                <a href="<?php bloginfo('home'); ?>"><?=$translate['gothenburg'] . $logo; ?></div></a>
+                <a href="<?php bloginfo('home'); ?>/english"><?=$translate['gothenburg'] . $logo; ?></div></a>
             </div>
             <div id="flags">
                 <a href="<?php echo $home; ?>">
@@ -119,7 +119,7 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
             </div>
             <img src="<?php bloginfo('template_url'); ?>/img/menu.png" id="menu-icon" class="only-mobile" alt="">
             <ul>
-                <li class="menu-item"><a href="<?php bloginfo('home'); ?>"><?=str_replace(['<p>', '</p>'], '', $translate['home']); ?></a></li>
+                <li class="menu-item"><a href="<?php bloginfo('home'); ?>/english"><?=str_replace(['<p>', '</p>'], '', $translate['home']); ?></a></li>
                 <li class="sub menu-item">
                     <span>
                         <?php $p = $home . '/#festivalprogram'; ?>
