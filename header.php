@@ -23,7 +23,10 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
     <?php wp_head(); ?>
 </head>
 <body>
-    <script>var templateUrl = '<?php echo get_bloginfo("template_url"); ?>';</script>
+    <script>
+    var templateUrl = '<?php echo get_bloginfo("template_url"); ?>';
+    var ajaxurl = '<?php echo admin_url("admin-ajax.php"); ?>';
+    </script>
     <div id="menu-modal" class="md-modal md-effect-1">
         <div class="md-content">
             <ul>
