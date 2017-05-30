@@ -132,3 +132,13 @@ function custom_translate() {
         wp_send_json_success($response);
     }
 }
+
+add_action('wp_ajax_nopriv_get_template_page', 'get_template_page');
+
+function get_template_page() {
+    $name = $_POST['name'];
+    $page = get_page_by_path($name);
+    $id = $page->ID;
+    include(locate_template('page-cv.php'));
+    wp_die();
+}

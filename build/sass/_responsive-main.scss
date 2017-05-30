@@ -12,6 +12,29 @@
         text-align: center;
         margin: 30px 0 30px 0;
     }
+    #close {
+        background: #FFFFFF;
+        border-bottom: 0;
+        top: 0;
+        left: 0;
+        position: fixed;
+        cursor: pointer;
+        z-index: 2001;
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+        box-shadow: 0 20px 20px #FFFFFF;
+    }
+    #close-btn {
+        border-bottom: 1px solid #000000;
+        font-size: 20px;
+    }
+    .program-previous {
+        margin-top: 70px;
+    }
+    .pedagog:last-child {
+        padding-bottom: 150px;
+    }
     #menu-icon {
         display: inline-block;
         float: right;
