@@ -1,5 +1,6 @@
 <?php
 /* Template Name: Pianisternas CV */
+$translate = getTranslations();
 ?>
 <div id="cv-page"></div>
 <div id="thumbnails">
