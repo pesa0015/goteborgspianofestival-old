@@ -32,6 +32,7 @@
         border-radius: 3px;
         margin: 10px;
         transition: .3s;
+        display: inline-block;
     }
     .tag:hover {
         background: $primaryColor;
