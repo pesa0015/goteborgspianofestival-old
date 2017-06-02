@@ -42,3 +42,9 @@
 .pedagog:last-child {
     padding-bottom: 300px;
 }
+@media (min-width: 1201px) {
+    .tags {
+        width: 1000px;
+        margin: auto;
+    }
+}
