@@ -14,9 +14,9 @@
 }
 .day-number {
     font-weight: 800;
-    color: $thirdColor;
+    color: $primaryColor;
     margin-right: 5px;
-    text-shadow: 1px 0px $thirdColorShadow;
+    text-shadow: 1px 0px $primaryColor;
 }
 .month {
     
@@ -24,7 +24,7 @@
 .activity-card {
     margin: 15px 30px 15px 30px;
     padding-bottom: 15px;
-    border-bottom: 1px solid $fourthColor;
+    border-bottom: 1px solid $primaryColor;
 }
 .activity-card {
     .left {
@@ -79,7 +79,7 @@
 .place {
     font-weight: 800;
     font-style: italic;
-    color: $thirdColor;
+    color: $primaryColor;
 }
 .black {
     font-weight: 600;
