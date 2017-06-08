@@ -1,6 +1,6 @@
 /node_modules
 /snippets
 style.css
-style-translate.min.css
+*.min.css
 page.php
 .DS_Store

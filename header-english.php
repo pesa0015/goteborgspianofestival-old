@@ -12,6 +12,10 @@ $logo = ' <span id="piano">Piano</span>';
 $logo .= '<span id="festival">festival</span>';
 $logo .= '<br />';
 $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['august'] . ' ' . year();
+global $post;
+$page = $post->post_name;
+$years = array('2016');
+$year = explode('-', $page)[1];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +24,9 @@ $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['augus
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
     <title>Göteborgs Pianofestival</title>
     <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_url'); ?>/style.css" />
+    <?php if (in_array($year, $years)) : ?>
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-<?php echo $page; ?>.min.css">
+    <?php endif; ?>
     <?php wp_head(); ?>
 </head>
 <body>
