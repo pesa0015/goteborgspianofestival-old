@@ -5,19 +5,7 @@ global $post;
 $programYear = $post->post_name;
 $title = $post->post_title;
 $tags = get_the_tags($post->ID);
-$c = array(
-    'Pressmeddelanden',
-    'Spelprogram',
-    $title,
-    'Pedagoger',
-    'Sagornas Musik',
-    'Finalkonsert',
-    'Unga och lovande pianister del 1',
-    'Unga och lovande pianister del 2',
-    'Unga och lovande pianister del 3'
-);
-foreach ($tags as $tag) :
-    array_push($c, $tag->name);
+$category = get_category_by_slug($programYear);
 ?>
 <div id="close" class="hide">
     <span id="close-btn">Stäng</span>
@@ -28,7 +16,6 @@ foreach ($tags as $tag) :
         <div id="content-<?php echo $tag->slug; ?>"></div>
     </div>
 </div>
-<?php endforeach; ?>
 <div class="md-overlay white"></div>
 <h1 class="title"><?php echo $title; ?></h1>
 <div class="tags">
@@ -37,9 +24,8 @@ foreach ($tags as $tag) :
 <?php endforeach; ?>
 </div>
 <?php
-$days = get_categories(array('parent_of' => $programYear, 'orderby' => 'name', 'order' => 'asc'));
-foreach ($days as $day) :
-    if (!in_array($day->name, $c)) : ?>
+$days = get_categories(array('parent' => $category->term_id, 'orderby' => 'name', 'order' => 'asc'));
+foreach ($days as $day) : ?>
 <div class="day">
     <div class="date">
         <span class="day-number"><?php echo $day->name; ?></span><span class="month">Augusti</span></h3>
@@ -79,8 +65,5 @@ foreach ($activities as $activity) :
 </div>
 <?php endforeach; ?>
 </div>
-<?php
-    endif;
-    endforeach;
-?>
+<?php endforeach; ?>
 <?php get_footer(); ?>
