@@ -60,7 +60,7 @@ foreach ($activities as $activity) :
                 $anchor = get_field('anchor', $id);
                 $page_link = get_field('page_link', $id) . '#' . substr($anchor, 34, -1);
                 $a = get_field('activity', $id); ?>
-                <a href="<?php echo $page_link; ?>" class="tooltip" title="Läs mer" target="_blank"><?php $a; ?></a>
+                <a href="<?php echo $page_link; ?>" class="tooltip" title="Läs mer" target="_blank"><?php echo $a; ?></a>
             <?php else :
                 $link = get_field('page_link', $id);
                 $a = get_field('activity', $id); ?>
