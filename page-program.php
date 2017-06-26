@@ -10,20 +10,20 @@ $category = get_category_by_slug($programYear);
 <div id="close" class="hide">
     <span id="close-btn">Stäng</span>
 </div>
-<?php foreach ($tags as $tag) : ?>
+<?php if ($tags) : foreach ($tags as $tag) : ?>
 <div id="modal-<?php echo $tag->slug; ?>" class="md-modal md-effect-1 program-previous">
     <div class="md-content">
         <div id="loading-<?php echo $tag->slug; ?>">Loading</div>
         <div id="content-<?php echo $tag->slug; ?>"></div>
     </div>
 </div>
-<?php endforeach; ?>
+<?php endforeach; endif; ?>
 <div class="md-overlay white"></div>
 <h1 class="title"><?php echo $title; ?></h1>
 <div class="tags">
-<?php foreach ($tags as $tag) : ?>
+<?php if ($tags) : foreach ($tags as $tag) : ?>
     <span class="tag" data-id="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?></span>
-<?php endforeach; ?>
+<?php endforeach; endif; ?>
 </div>
 <?php
 $days = get_categories(array('parent' => $category->term_id, 'orderby' => 'name', 'order' => 'asc'));
