@@ -39,7 +39,7 @@ $translate = getTranslations();
 </div>
 <div id="festivalprogram_anchor">
     <div class="title">
-        <h4><?php echo $translate['comes_soon']; ?></h4>
+        <h4><a href="<?php echo $home; ?>/program-2017" style="color: inherit;">Festivalprogram 2017</a></h4>
     </div>
 </div>
 <div id="footer">
