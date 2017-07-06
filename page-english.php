@@ -57,11 +57,6 @@ $translate = getTranslations();
                 </a>
             </div>
             <div class="sponsor">
-                <a href="http://steinway.com/" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/img/sponsors/Steinway_black.jpg" alt="">
-                </a>
-            </div>
-            <div class="sponsor">
                 <?php
                 $file = '/text/kulturskolan_sponsor.txt';
                 $kulturskolan = file_get_contents(get_bloginfo('template_url') . $file); ?>
