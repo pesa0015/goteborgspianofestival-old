@@ -14,7 +14,7 @@ $logo .= '<br />';
 $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['august'] . ' ' . year();
 global $post;
 $page = $post->post_name;
-$years = array('2016');
+$years = explode(',', get_field('all_years', $pageId));
 $year = explode('-', $page)[1];
 ?>
 <!DOCTYPE html>
@@ -136,9 +136,11 @@ $year = explode('-', $page)[1];
                         <a href="<?php echo $p; ?>" class="go"><?=$translate['festivalprogram']; ?></a>
                     </span>
                     <ul>
+                        <?php foreach ($years as $y) : ?>
                         <li>
-                            <a href="<?php echo $home; ?>/program-2016">Program 2016</a>
+                            <a href="<?php echo $home; ?>/program-<?php echo $y; ?>">Program <?php echo $y; ?></a>
                         </li>
+                        <?php endforeach; ?>
                     </ul>
                 </li>
                 <li id="participate" class="sub menu-item">
