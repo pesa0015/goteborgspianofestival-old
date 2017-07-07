@@ -1,11 +1,15 @@
 <?php
 /* Template Name: Pianisternas CV */
 $translate = getTranslations();
+$fromModal = (isset($id)) ? true : false;
+if (!$fromModal) {
+    get_header();
+}
 ?>
 <div id="cv-page"></div>
 <div id="thumbnails">
 <?php
-$p_id = $id;
+$p_id = ($fromModal) ? $id : get_queried_object_id();
 $posts = get_posts(array('category_name' => get_field('kategori', $p_id), 'orderby' => 'date', 'order' => 'asc', 'posts_per_page' => 10));
 if ($posts): foreach ($posts as $post): ?>
 <div id="thumbnail-<?php echo $post->post_name; ?>" class="thumbnail">
@@ -29,3 +33,7 @@ if ($posts): foreach ($posts as $post): ?>
 	<p id="<?php echo $post->post_name; ?>" class="cv-text"><?php the_field('cv_' . $_SESSION['lang'], $post->ID); ?></p>
 </div>
 <?php endforeach;endif; ?>
+<?php if (!$fromModal) {
+    get_footer();
+}
+?>
