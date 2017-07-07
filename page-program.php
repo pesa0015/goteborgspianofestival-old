@@ -21,8 +21,12 @@ $category = get_category_by_slug($programYear);
 <div class="md-overlay white"></div>
 <h1 class="title"><?php echo $title; ?></h1>
 <div class="tags">
-<?php if ($tags) : foreach ($tags as $tag) : ?>
-    <span class="tag" data-id="<?php echo $tag->slug; ?>"><?php echo $tag->name; ?></span>
+<?php if ($tags) : foreach ($tags as $tag) :
+$tagName = $tag->name;
+if (strpos($tagName, '_') !== false) :
+    $tagName = str_replace('_' . programYear(), '', $tagName);
+endif; ?>
+    <span class="tag" data-id="<?php echo $tag->slug; ?>"><?php echo $tagName; ?></span>
 <?php endforeach; endif; ?>
 </div>
 <?php
