@@ -50,7 +50,7 @@ foreach ($activities as $activity) :
         <div class="activity">
             <?php if (get_field('anchor', $id)) :
                 $anchor = get_field('anchor', $id);
-                $page_link = get_field('page_link', $id) . '#' . substr($anchor, 34, -1);
+                $page_link = get_field('page_link', $id) . '#' . substr($anchor, 35, -1);
                 $a = get_field('activity', $id); ?>
                 <a href="<?php echo $page_link; ?>" class="tooltip" title="Läs mer" target="_blank"><?php echo $a; ?></a>
             <?php else :
