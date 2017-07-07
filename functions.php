@@ -26,6 +26,14 @@ function remove_jquery(&$scripts)
     }
 }
 
+function programYear() {
+    global $post;
+    $page = $post->post_name;
+    $year = explode('-', $page)[1];
+
+    return $year;
+}
+
 function year() {
     return get_field('year', PAGE_DATES);
 }

@@ -12,10 +12,8 @@ $logo = ' <span id="piano">Piano</span>';
 $logo .= '<span id="festival">festival</span>';
 $logo .= '<br />';
 $logo .= '<div id="when">' . begins() . ' - ' . ends() . ' ' . $translate['august'] . ' ' . year();
-global $post;
-$page = $post->post_name;
 $years = explode(',', get_field('all_years', $pageId));
-$year = explode('-', $page)[1];
+$year = programYear();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +23,7 @@ $year = explode('-', $page)[1];
     <title>Göteborgs Pianofestival</title>
     <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_url'); ?>/style.css" />
     <?php if (in_array($year, $years)) : ?>
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-<?php echo $page; ?>.min.css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-program-<?php echo $year; ?>.min.css">
     <?php endif; ?>
     <?php wp_head(); ?>
 </head>
