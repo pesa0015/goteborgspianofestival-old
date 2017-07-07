@@ -142,6 +142,7 @@ function custom_translate() {
 }
 
 add_action('wp_ajax_nopriv_get_template_page', 'get_template_page');
+add_action('wp_ajax_get_template_page', 'get_template_page');
 
 function get_template_page() {
     $name = $_POST['name'];
