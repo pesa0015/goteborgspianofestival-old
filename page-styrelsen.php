@@ -4,31 +4,21 @@ get_header();
 ?>
 <div id="board-page"></div>
 <div id="content">
-<h1><?=$translate['board']; ?> / 2017-2018</h1>
+<h1><?php the_field('title'); ?></h1>
 <p>
-	<span class="underline"><?=$translate['boss']; ?></span>
+	<span class="underline"><?php the_field('title_leader'); ?></span>
 	<br />
-	<span>Ha-Young Sul</span>
+	<span><?php the_field('leader'); ?></span>
 	<br />
 	<br />
-	<span class="underline"><?=$translate['members']; ?>:</span>
+	<span class="underline"><?php the_field('title_members'); ?></span>
 	<br />
-	<span>Anna-Maria Pusztai</span>
-    <br />
-    <span>Gustaf Edlund</span>
-	<br />
-	<span>Henrik Kilhamn</span>
-	<br />
-	<span>Kalle Stenbäcken</span>
+	<?php the_field('members'); ?>
 	<br />
     <br />
-	<span class="underline"><?=$translate['substitutes']; ?>:</span>
+	<span class="underline"><?php the_field('title_suppleants'); ?></span>
     <br />
-    <span>Julia Judovic</span>
-	<br />
-	<span>Carl Petersson</span>
-	<br />
-	<span>Jonas Olsson</span>
+    <?php the_field('suppleants'); ?>
 </p>
 </div>
 <?php get_footer(); ?>
