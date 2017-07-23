@@ -23,9 +23,13 @@ h1 {
     .board-right {
         // float: none;
         position: relative;
+        width: 100%;
     }
     #content-board {
         width: 80%;
+    }
+    h1 {
+        text-align: center;
     }
     img {
         width: 100%;
