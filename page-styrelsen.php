@@ -5,7 +5,7 @@ get_header();
 <div id="board-page"></div>
 <div id="content-board">
 <h1><?php the_field('title'); ?></h1>
-<div class="left">
+<div class="board-left">
 	<span class="underline"><?php the_field('title_leader'); ?></span>
 	<br />
 	<span><?php the_field('leader'); ?></span>
@@ -20,7 +20,7 @@ get_header();
     <br />
     <?php the_field('suppleants'); ?>
 </div>
-<div class="right">
+<div class="board-right">
     <img src="<?php the_field('bild'); ?>">
 </div>
 </div>

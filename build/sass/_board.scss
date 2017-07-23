@@ -1,7 +1,7 @@
-.left, .right {
+.board-left, .board-right {
     display: inline-block;
 }
-.right {
+.board-right {
     float: right;
 }
 #content-board {
@@ -15,11 +15,11 @@ h1 {
     margin-bottom: 60px;
 }
 @media (max-width: 968px) {
-    .left {
+    .board-left {
         position: absolute;
         margin-top: 65%;
     }
-    .right {
+    .board-right {
         // float: none;
         position: relative;
     }
