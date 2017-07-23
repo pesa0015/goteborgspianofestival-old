@@ -1,6 +1,6 @@
 <?php
 /* Template Name: Styrelsen */
-require 'header.php';
+get_header();
 ?>
 <div id="board-page"></div>
 <div id="content">
