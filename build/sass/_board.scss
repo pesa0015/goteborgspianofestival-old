@@ -1,0 +1,32 @@
+.left, .right {
+    display: inline-block;
+}
+.right {
+    float: right;
+}
+#content-board {
+    font-family: "Noto Serif",Arial;
+    width: 900px;
+    margin: 100px auto;
+    text-align: justify;
+    line-height: 25px;
+}
+h1 {
+    margin-bottom: 60px;
+}
+@media (max-width: 968px) {
+    .left {
+        position: absolute;
+        margin-top: 65%;
+    }
+    .right {
+        // float: none;
+        position: relative;
+    }
+    #content-board {
+        width: 80%;
+    }
+    img {
+        width: 100%;
+    }
+}

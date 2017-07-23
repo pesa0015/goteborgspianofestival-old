@@ -3,9 +3,9 @@
 get_header();
 ?>
 <div id="board-page"></div>
-<div id="content">
+<div id="content-board">
 <h1><?php the_field('title'); ?></h1>
-<p>
+<div class="left">
 	<span class="underline"><?php the_field('title_leader'); ?></span>
 	<br />
 	<span><?php the_field('leader'); ?></span>
@@ -19,6 +19,9 @@ get_header();
 	<span class="underline"><?php the_field('title_suppleants'); ?></span>
     <br />
     <?php the_field('suppleants'); ?>
-</p>
+</div>
+<div class="right">
+    <img src="<?php the_field('bild'); ?>">
+</div>
 </div>
 <?php get_footer(); ?>
