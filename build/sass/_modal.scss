@@ -22,6 +22,9 @@
 }
 .md-content > div {
     padding: 0;
+    p {
+        font-family: $primaryFontRegular;
+    }
 }
 .md-content button {
     
