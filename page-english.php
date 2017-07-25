@@ -47,47 +47,7 @@ $translate = getTranslations();
     <h1 id="sponsors-title" class="title">Sponsors</h1>
     <div id="sponsors">
         <div class="sponsors">
-            <div class="sponsor only-text" style="margin: 0 0 50px 30px;">
-                <span>Odd Fellow logen nr. 69 Lennart Torstenson</span>
-            </div>
-            <br />
-            <div class="sponsor">
-                <a href="http://goteborgco.se/" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/img/sponsors/gbgco.png" alt="">
-                </a>
-            </div>
-            <div class="sponsor">
-                <?php
-                $file = '/text/kulturskolan_sponsor.txt';
-                $kulturskolan = file_get_contents(get_bloginfo('template_url') . $file); ?>
-                <a href="<?php echo $kulturskolan; ?>" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/img/sponsors/kulturskolan.png" alt="">
-                </a>
-            </div>
-            <br />
-            <div class="sponsor">
-                <a href="http://www.svanstrom.se/" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/img/sponsors/Svanstrom-logo.png" alt="">
-                </a>
-            </div>
-            <div class="sponsor only-text">
-                <a href="http://haxsonj.se/www/" target="_blank"><span>Helga Ax:son Johnsons Stiftelse</span></a>
-            </div>
-            <div class="sponsor only-text">
-                <a href="http://www.wikandersstiftelse.se/" target="_blank"><span>Wikanders Stiftelse</span></a>
-            </div>
-            <br />
-            <div class="sponsor">
-                <img src="<?php bloginfo('template_url'); ?>/img/sponsors/casio.png" id="casio" alt="">
-            </div>
-            <div class="sponsor">
-                <a href="http://www.mcv.se/" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/img/sponsors/mcv.png" id="mcv-logo" alt="">
-                </a>
-            </div>
-            <div class="sponsor">
-                <img src="<?php bloginfo('template_url'); ?>/img/sponsors/tornrosa.png" alt="">
-            </div>
+            <?php get_template_part('page_templates/sponsors', 'sponsors'); ?>
         </div>
     </div>
     <h1 id="partners-title" class="title">Partners</h1>
