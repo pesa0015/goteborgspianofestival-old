@@ -46,47 +46,45 @@ $translate = getTranslations();
     <h1 id="sponsors-title" class="title">Sponsorer</h1>
     <div id="sponsors">
         <div class="sponsors">
-            <div class="sponsor only-text" style="margin: 0 0 50px 30px;">
-                <span>Odd Fellow logen nr. 69 Lennart Torstenson</span>
-            </div>
-            <br />
-            <div class="sponsor">
-                <a href="http://goteborgco.se/" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/img/sponsors/gbgco.png" alt="">
-                </a>
-            </div>
-            <div class="sponsor">
-                <?php
-                $file = '/text/kulturskolan_sponsor.txt';
-                $kulturskolan = file_get_contents(get_bloginfo('template_url') . $file); ?>
-                <a href="<?php echo $kulturskolan; ?>" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/img/sponsors/kulturskolan.png" alt="">
-                </a>
-            </div>
-            <br />
-            <div class="sponsor">
-                <a href="http://www.svanstrom.se/" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/img/sponsors/Svanstrom-logo.png" alt="">
-                </a>
-            </div>
-            <div class="sponsor only-text">
-                <a href="http://haxsonj.se/www/" target="_blank"><span>Helga Ax:son Johnsons Stiftelse</span></a>
-            </div>
-            <div class="sponsor only-text">
-                <a href="http://www.wikandersstiftelse.se/" target="_blank"><span>Wikanders Stiftelse</span></a>
-            </div>
-            <br />
-            <div class="sponsor">
-                <img src="<?php bloginfo('template_url'); ?>/img/sponsors/casio.png" id="casio" alt="">
-            </div>
-            <div class="sponsor">
-                <a href="http://www.mcv.se/" target="_blank">
-                    <img src="<?php bloginfo('template_url'); ?>/img/sponsors/mcv.png" id="mcv-logo" alt="">
-                </a>
-            </div>
-            <div class="sponsor">
-                <img src="<?php bloginfo('template_url'); ?>/img/sponsors/tornrosa.png" alt="">
-            </div>
+            <?php
+
+            $category = get_category_by_slug('sponsorer');
+            $sponsors = get_posts(array('cat' => $category->term_id, 'numberposts' => 0));
+
+            foreach ($sponsors as $sponsor) : $id = $sponsor->ID;
+                $link = get_field('link', $id);
+                $img = get_field('bild', $id);
+                $onlyText = (!$link && !$img) ? true : false;
+                $onlyImage = (!$link && $img) ? true : false;
+                $linkAndNotImage = ($link && !$img) ? true : false;
+                $linkAndImage = ($link && $img) ? true : false;
+
+                if ($onlyText) : ?>
+                    <div id="<?php echo $sponsor->post_name; ?>" class="sponsor only-text">
+                        <span><?php the_field('text', $id); ?></span>
+                    </div>
+                <?php endif; ?>
+                <?php if ($onlyImage) : ?>
+                    <div id="<?php echo $sponsor->post_name; ?>" class="sponsor">
+                        <img src="<?php echo $img; ?>" alt="">
+                    </div>
+                <?php endif; ?>
+                <?php if ($linkAndNotImage) : ?>
+                    <div id="<?php echo $sponsor->post_name; ?>" class="sponsor only-text">
+                        <a href="<?php echo $link; ?>" target="_blank"><span><?php the_field('text', $id); ?></span></a>
+                    </div>
+                <?php endif; ?>
+                <?php if ($linkAndImage) : ?>
+                    <div id="<?php echo $sponsor->post_name; ?>" class="sponsor">
+                        <a href="<?php echo $link; ?>" target="_blank">
+                            <img src="<?php echo $img; ?>" alt="">
+                        </a>
+                    </div>
+                <?php endif; ?>
+                <?php if (get_field('new_row', $id)) : ?>
+                    <br />
+                <?php endif; ?>
+            <?php endforeach; ?>
         </div>
     </div>
     <h1 id="partners-title" class="title">Samarbetspartners</h1>
