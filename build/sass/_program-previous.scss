@@ -48,3 +48,12 @@
         margin: auto;
     }
 }
+@media (max-width: 1200px) {
+    #close {
+        top: initial;
+        bottom: 0;
+        left: 0;
+        border-bottom: 5px solid $primaryColor;
+        padding: 20px 0;
+    }
+}
