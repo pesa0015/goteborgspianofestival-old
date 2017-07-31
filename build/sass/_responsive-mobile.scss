@@ -79,6 +79,28 @@
     .day:nth-child(3), .day:nth-child(4), .day:nth-child(6), .day:nth-child(7) {
         border-left: 0;
     }
+    .day {
+        .date {
+            font-size: 15px;
+            margin: 10px;
+        }
+        .activity-card {
+            margin: 5px 10px;
+            .left {
+                // font-family: $primaryFontRegular;
+                font-size: 12px;
+                float: none;
+                margin: 0;
+            }
+            .right {
+                width: 100%;
+            }
+        }
+        .activity, .description, .place {
+            font-family: $primaryFontRegular;
+            font-size: 10px;
+        }
+    }
     #wrapper-img {
         height: 400px;
     }
