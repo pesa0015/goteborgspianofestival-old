@@ -34,6 +34,11 @@
     .pedagog:last-child {
         padding-bottom: 150px;
     }
+    .thumbnail {
+        img {
+            width: initial;
+        }
+    }
     #menu-icon {
         display: inline-block;
         float: right;
