@@ -1,3 +1,18 @@
+#pdf {
+    text-align: center;
+    margin: 30px 0 70px 0;
+    a {
+        text-decoration: none;
+        color: inherit;
+        span {
+            vertical-align: middle;
+        }
+        img {
+            vertical-align: middle;
+            width: 20px;
+        }
+    }
+}
 .day {
     width: 33%;
     display: inline-block;

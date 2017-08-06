@@ -20,6 +20,16 @@ $category = get_category_by_slug($programYear);
 <?php endforeach; endif; ?>
 <div class="md-overlay white"></div>
 <h1 class="title"><?php echo $title; ?></h1>
+<?php
+$pdf = get_field('pdf', PAGE_PDF);
+if ($pdf) : ?>
+<div id="pdf">
+    <a href="<?php echo home(); ?>/festivalprogram-pdf" target="_blank">
+        <span>Hämta pdf</span>
+        <img src="<?php bloginfo('template_url'); ?>/img/download.png" alt=""></a>
+    </a>
+</div>
+<?php endif; ?>
 <div class="tags">
 <?php if ($tags) : foreach ($tags as $tag) :
 $tagName = $tag->name;
