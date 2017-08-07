@@ -45,7 +45,6 @@ function showModal(modal, closeOnOutsideClick, btn, hideMenu, pauseYoutubeVideo)
 }
 menuIcon.onclick = function() {
   showModal(menuModal, true, true, false);   
-  document.getElementById('close').className = 'hide';
 }
 $('.open-modal').click(function(e){
   e.preventDefault();
