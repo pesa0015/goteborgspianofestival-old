@@ -3,4 +3,4 @@
 style.css
 *.min.css
 page.php
-.DS_Store
+*.DS_Store
