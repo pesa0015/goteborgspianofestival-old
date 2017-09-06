@@ -25,15 +25,7 @@ $translate = getTranslations();
             <span id="place-2">Artisten</span>
             <span id="place-3">Världskulturmuseet</span>
         </div>
-        <?php
-        $today = new DateTime(date('Y-m-d'));
-        $start = new DateTime(year() . '-08-' . begins());
-        $days = $today->diff($start);
-        ?>
-        <div id="count-down">
-            <div id="days-left"><?php echo $days->format('%a'); ?></div>
-            <div><?=$translate['days_left']; ?></div>
-        </div>
+        <?php get_template_part('page_templates/countdown', 'countdown'); ?>
         <div id="bouncing-arrow" class="arrow bounce"></div>
     </div>
 </div>
