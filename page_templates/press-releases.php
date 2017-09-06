@@ -8,6 +8,7 @@ foreach ($releases as $release) :
     $title = get_field('title_sv', $id);
     $content = get_field('body_sv', $id); ?>
     <div class="release">
+        <hr />
         <span class="release-date"><?php echo get_the_date(); ?></span>
         <br />
         <br />
