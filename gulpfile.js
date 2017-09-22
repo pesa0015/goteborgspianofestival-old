@@ -30,6 +30,20 @@ gulp.task('css', function() {
         .pipe(gulp.dest('.'));
 });
 
+gulp.task('program-2017', function() {
+    return gulp.src('build/sass/program_styles-2017.scss')
+        .pipe(sass()).pipe(minifyCSS())
+        .pipe(concat('style-program-2017.min.css'))
+        .pipe(gulp.dest('.'));
+});
+
+gulp.task('program-2016', function() {
+    return gulp.src('build/sass/program_styles-2016.scss')
+        .pipe(sass()).pipe(minifyCSS())
+        .pipe(concat('style-program-2016.min.css'))
+        .pipe(gulp.dest('.'));
+});
+
 gulp.task('vendor-js', function() {
     return gulp.src(['vendor/jquery.min.js', 'vendor/*/js/*.js', 'js/dist.min.js'])
         .pipe(uglify())
@@ -38,16 +52,16 @@ gulp.task('vendor-js', function() {
 });
 
 gulp.task('vendor-css', function() {
-    return gulp.src(['vendor/*/css/*.min.css', 'css/dist.min.css'])
-        .pipe(concat('style.min.css'))
+    return gulp.src(['vendor/*/css/*.min.css', '!vendor/bootstrap/css/*.min.css', '!vendor/quill/css/*.min.css', 'css/dist.min.css'])
+        .pipe(concat('style.css'))
         .pipe(gulp.dest('.'));
 });
 
 gulp.task('watch', function() {
-    runSequence('css', 'vendor-css');
+    runSequence('css', 'vendor-css', 'program-2017', 'program-2016');
     runSequence('js', 'vendor-js');
     watch('build/sass/*.scss', function() {
-        runSequence('css', 'vendor-css');
+        runSequence('css', 'vendor-css', 'program-2017', 'program-2016');
     });
     watch('build/js/*.js', function() {
         runSequence('js', 'vendor-js');

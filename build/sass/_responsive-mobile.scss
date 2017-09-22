@@ -2,11 +2,17 @@
     header, #wrapper {
         margin-top: 0;
     }
-    .md-modal {
+    .md-modal:not(.program-previous) {
         width: 80%;
     }
     .md-content {
         width: 100%;
+    }
+    #top {
+        width: 300px;
+        margin: 50px auto;
+        padding: 0;
+        border-left: 0;
     }
     #logo {
         font-size: 17px;
@@ -65,12 +71,35 @@
     }
     .title {
         font-size: 40px;
+        padding-top: 60px;
     }
     .day {
         width: 100%;
     }
     .day:nth-child(3), .day:nth-child(4), .day:nth-child(6), .day:nth-child(7) {
         border-left: 0;
+    }
+    .day {
+        .date {
+            font-size: 15px;
+            margin: 10px;
+        }
+        .activity-card {
+            margin: 5px 10px;
+            .left {
+                // font-family: $primaryFontRegular;
+                font-size: 12px;
+                float: none;
+                margin: 0;
+            }
+            .right {
+                width: 100%;
+            }
+        }
+        .activity, .description, .place {
+            font-family: $primaryFontRegular;
+            font-size: 10px;
+        }
     }
     #wrapper-img {
         height: 400px;
@@ -86,6 +115,7 @@
     }
     .pedagog {
         width: 300px;
+        padding: 50px 0;
     }
     .pedagog {
         img { width: 130px; }

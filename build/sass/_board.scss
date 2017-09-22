@@ -1,0 +1,37 @@
+.board-left, .board-right {
+    display: inline-block;
+}
+.board-right {
+    float: right;
+}
+#content-board {
+    font-family: "Noto Serif",Arial;
+    width: 900px;
+    margin: 100px auto;
+    text-align: justify;
+    line-height: 25px;
+}
+h1 {
+    margin-bottom: 60px;
+}
+@media (max-width: 968px) {
+    .board-left {
+        position: absolute;
+        margin-top: 65%;
+        margin-bottom: 65px;
+    }
+    .board-right {
+        // float: none;
+        position: relative;
+        width: 100%;
+    }
+    #content-board {
+        width: 80%;
+    }
+    h1 {
+        text-align: center;
+    }
+    img {
+        width: 100%;
+    }
+}

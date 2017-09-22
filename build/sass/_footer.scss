@@ -16,11 +16,13 @@
         text-decoration: none;
     }
 }
-.sponsor img:not(#casio) {
+.sponsor img {
     width: 200px;
 }
+#odd-fellow-logen-nr-69-lennart-torstenson {
+    margin: 0 0 30px 0;
+}
 #casio {
-    width: 150px;
     margin-top: 50px;
 }
 #mcv-logo {
@@ -35,7 +37,7 @@
     /*margin: 0 20px 0 20px;*/
 }
 .dot {
-    background: $secondaryColor;
+    background: $primaryColor;
     display: inline-block;
     height: 10px;
     width: 10px;

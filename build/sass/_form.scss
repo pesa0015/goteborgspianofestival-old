@@ -8,6 +8,9 @@ input[type=text], input[type=email], input[type=tel], textarea {
     outline: 0;
     transition: .3s;
 }
+input[type=checkbox] + span {
+    display: none;
+}
 input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
     border-bottom: 1px solid $nav-link-hover-color;
 }
@@ -20,11 +23,12 @@ textarea {
     border: 0;
     padding: 3%;
     width: 91%;
+    height: 100px;
     /*padding: 15px;*/
     /*width: 95%;*/
 }
 textarea:focus {
-    background: $secondaryColor;
+    background: #D8CFE4;
 }
 input[type=submit] {
     background: transparent;

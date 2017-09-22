@@ -5,7 +5,8 @@
 }
 #modal-video {
     /*background: rgba(128,128,128,0.8);*/
-    height: auto;
+    background: #A99FC2;
+    height: 100%;
 }
 .md-modal:before {
     content: ' ';
@@ -21,6 +22,9 @@
 }
 .md-content > div {
     padding: 0;
+    p {
+        font-family: $primaryFontRegular;
+    }
 }
 .md-content button {
     

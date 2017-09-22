@@ -124,8 +124,8 @@ body {
 	margin-top: 70px;
 }
 #days-left {
-	color: #AD8CBA;
-	text-shadow: 1px 0px $thirdColorShadow;
+	color: $primaryColor;
+	text-shadow: 1px 0px $secondaryColor;
 }
 #days-left + div {
 	font-weight: 400;
@@ -138,13 +138,6 @@ body {
 }
 .italic {
 	font-style: italic;
-}
-#pdf {
-	font-size: 25px;
-	text-align: center;
-	text-decoration: none;
-    color: inherit;
-    border-bottom: 7px solid #000000;
 }
 #wrapper-img {
     .title {

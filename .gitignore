@@ -1,4 +1,6 @@
 /node_modules
 /snippets
-style.min.css
+style.css
+*.min.css
 page.php
+*.DS_Store

@@ -93,16 +93,6 @@ if (window.location.hash && document.contains(document.getElementById('cv-page')
   }, 0);
 }
 var xhttp = new XMLHttpRequest();
-$('.flag').click(function(){
-    xhttp.onreadystatechange = function() {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-            window.location.reload();
-        }
-   }
-   xhttp.open('POST', templateUrl + '/lang/change.php', true);
-   xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-   xhttp.send('lang=' + this.getAttribute('data-lang'));
-});
 $('.tooltip').tooltipster({
   delay: 50
 });

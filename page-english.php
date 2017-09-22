@@ -1,5 +1,6 @@
 <?php
-get_header();
+/* Template Name: English */
+get_header('english');
 $translate = getTranslations();
 ?>
 <div id="start-background">
@@ -38,13 +39,13 @@ $translate = getTranslations();
     <?php get_template_part('page_templates/press-releases', 'press-releases'); ?>
 </div>
 <div id="footer">
-    <h1 id="sponsors-title" class="title">Sponsorer</h1>
+    <h1 id="sponsors-title" class="title">Sponsors</h1>
     <div id="sponsors">
         <div class="sponsors">
             <?php get_template_part('page_templates/sponsors', 'sponsors'); ?>
         </div>
     </div>
-    <h1 id="partners-title" class="title">Samarbetspartners</h1>
+    <h1 id="partners-title" class="title">Partners</h1>
     <div id="partners">
         <span class="partner">Världskulturmuseet</span>
         <span class="dot"></span>

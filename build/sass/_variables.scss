@@ -1,51 +1,10 @@
 $themeName: '/pianofestival/wp-content/themes/goteborgspianofestival';
-$primaryColor: #A99FC2;
-$secondaryColor: #E1CFFD;
-$thirdColor: #ad8cba;
-$thirdColorShadow: #56465d;
-$fourthColor: #D9AFE9;
+$primaryColor: #11BA7D;
+$secondaryColor: #085D3E;
 $nav-link-color: #FFFFFF;
 $nav-link-hover-color: #5A5265;
-$primaryFont: 'Raleway', sans-serif;
+$primaryFont: 'Raleway bold', sans-serif;
+$primaryFontRegular: 'Raleway regular', sans-serif;
+$primaryFontMedium: 'Raleway medium', sans-serif;
 $secondaryFont: 'Noto Serif', Arial;
 $thirdFont: 'PT Serif';
-
-@font-face {
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-style: normal;
-  src: url($themeName + '/fonts/Raleway-700/Raleway-700.eot');
-  src: url($themeName + '/fonts/Raleway-700/Raleway-700.eot?#iefix') format('embedded-opentype'),
-       local('Raleway'),
-       local('Raleway-700'),
-       url($themeName + '/fonts/Raleway-700/Raleway-700.woff2') format('woff2'),
-       url($themeName + '/fonts/Raleway-700/Raleway-700.woff') format('woff'),
-       url($themeName + '/fonts/Raleway-700/Raleway-700.ttf') format('truetype'),
-       url($themeName + '/fonts/Raleway-700/Raleway-700.svg#Raleway') format('svg');
-}
-@font-face {
-  font-family: 'Noto Serif';
-  font-weight: 400;
-  font-style: normal;
-  src: url($themeName + '/fonts/Noto-Serif-regular/Noto-Serif-regular.eot');
-  src: url($themeName + '/fonts/Noto-Serif-regular/Noto-Serif-regular.eot?#iefix') format('embedded-opentype'),
-       local('Noto Serif'),
-       local('Noto-Serif-regular'),
-       url($themeName + '/fonts/Noto-Serif-regular/Noto-Serif-regular.woff2') format('woff2'),
-       url($themeName + '/fonts/Noto-Serif-regular/Noto-Serif-regular.woff') format('woff'),
-       url($themeName + '/fonts/Noto-Serif-regular/Noto-Serif-regular.ttf') format('truetype'),
-       url($themeName + '/fonts/Noto-Serif-regular/Noto-Serif-regular.svg#NotoSerif') format('svg');
-}
-@font-face {
-  font-family: 'PT Serif';
-  font-weight: 400;
-  font-style: normal;
-  src: url($themeName + '/fonts/PT-Serif-regular/PT-Serif-regular.eot');
-  src: url($themeName + '/fonts/PT-Serif-regular/PT-Serif-regular.eot?#iefix') format('embedded-opentype'),
-       local('PT Serif'),
-       local('PT-Serif-regular'),
-       url($themeName + '/fonts/PT-Serif-regular/PT-Serif-regular.woff2') format('woff2'),
-       url($themeName + '/fonts/PT-Serif-regular/PT-Serif-regular.woff') format('woff'),
-       url($themeName + '/fonts/PT-Serif-regular/PT-Serif-regular.ttf') format('truetype'),
-       url($themeName + '/fonts/PT-Serif-regular/PT-Serif-regular.svg#PTSerif') format('svg');
-}

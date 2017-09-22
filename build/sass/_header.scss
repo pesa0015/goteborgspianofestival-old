@@ -37,7 +37,7 @@ header {
         }
     }
 }
-#logo, #participate {
+#logo, #participate, #media, #more {
     color: $nav-link-color;
 }
 #note {
@@ -57,10 +57,17 @@ header {
     }
 }
 #flags {
-    img:first-child { margin-right: 10px; }
+    img {
+        width: 30px;
+        border: 1px solid $secondaryColor;
+        border-radius: 5px;
+        position: absolute;
+        top: 40%;
+        left: 30%;
+    }
 }
 #flags {
-    img:hover { box-shadow: 1px 1px 5px #000000; }
+    img:hover { box-shadow: 1px 1px 5px $secondaryColor; }
 }
 header {
     ul {
@@ -68,7 +75,7 @@ header {
         list-style: none;
         display: inline-block;
         float: right;
-        margin: 20px 50px 20px 50px;
+        margin: 20px 10% 20px 50px;
         padding: 0;
         line-height: 60px;
     }
@@ -76,19 +83,26 @@ header {
 .menu-item {
     display: inline-block;
 }
-header ul li a:not(.sub-link), #participate span {
+header ul li a:not(.sub-link), #participate span, #media span, #more span {
     text-decoration: none;
     padding: 40px 20px 43px 20px;
     transition: .1s;
 }
-header ul li a:hover, #participate span:hover, #participate li:hover, #young-pianists-span:hover {
+header ul li a:hover,
+#participate span:hover,
+#participate li:hover,
+#media span:hover,
+#media li:hover,
+#more span:hover,
+#more li:hover,
+#young-pianists-span:hover {
     background: $nav-link-hover-color;
     //color: #5A5265;
 }
 #member a {
     //margin: 0px 30px 0 30px;
 }
-#participate {
+#participate, #media, #more {
     span { cursor: pointer; }
 }
 .sub {
@@ -102,7 +116,7 @@ header ul li a:hover, #participate span:hover, #participate li:hover, #young-pia
 .sub span:hover + ul, .sub ul:hover {
     display: block;
 }
-.sub {
+li.sub {
     ul {
         li {
             a {
@@ -114,13 +128,17 @@ header ul li a:hover, #participate span:hover, #participate li:hover, #young-pia
         }
     }
 }
-#young-pianists-span {
+#young-pianists-span, #year-2016 {
     color: $nav-link-color;
     padding: 10px 15px 10px 15px;
     cursor: pointer;
     display: block;
 }
-#young-pianists {
+#year-2016 {
+    background: #000000;
+}
+#young-pianists, #program-2016 {
+    font-size: 14px;
     display: none;
     position: absolute;
     width: 100%;
@@ -128,6 +146,19 @@ header ul li a:hover, #participate span:hover, #participate li:hover, #young-pia
     top: 45%;
     border-left: 3px solid $secondaryColor;
 }
-#young-pianists-span:hover + #young-pianists, #young-pianists:hover {
+#young-pianists {
+    top: 32%;
+}
+#program-2016 {
+    top: -29%;
+}
+#young-pianists-span:hover + #young-pianists, #young-pianists:hover, #program-2016 {
     display: block;
+}
+#more {
+    img {
+        width: 30px;
+        vertical-align: middle;
+        margin-bottom: 5px;
+    }
 }
