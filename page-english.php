@@ -10,10 +10,10 @@ $translate = getTranslations();
                 <img src="<?php bloginfo('template_url'); ?>/img/slider/GoteborgsOperan.png" alt="">
             </li>
             <li data-place="2">
-                <img src="<?php bloginfo('template_url'); ?>/img/slider/artisten.png" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/img/slider/gbg_konserthus.jpg" alt="">
             </li>
             <li data-place="3">
-                <img src="<?php bloginfo('template_url'); ?>/img/slider/varldskulturmuseet.png" alt="">
+                <img src="<?php bloginfo('template_url'); ?>/img/slider/Dicksonska.jpg" alt="">
             </li>
         </ul>
     </div>
@@ -22,9 +22,9 @@ $translate = getTranslations();
         <br />
         <span><?php echo begins() . ' - ' . ends() . ' ' . $translate['august'] . ' ' . year(); ?></span>
         <div id="places">
-            <span id="place-1">Göteborgsoperan</span>
-            <span id="place-2">Artisten</span>
-            <span id="place-3">Världskulturmuseet</span>
+            <span id="place-1">GöteborgsOperan</span>
+            <span id="place-2">Göteborgs konserthus</span>
+            <span id="place-3">Dicksonska palatset</span>
         </div>
         <?php get_template_part('page_templates/countdown', 'countdown'); ?>
         <div id="bouncing-arrow" class="arrow bounce"></div>
@@ -49,7 +49,7 @@ $translate = getTranslations();
     <div id="partners">
         <span class="partner">Världskulturmuseet</span>
         <span class="dot"></span>
-        <span class="partner">Högskolan för scen och musik</span>
+        <span class="partner">Göteborgs konserthus</span>
         <span class="dot"></span>
         <span class="partner">GöteborgsOperan</span>
     </div>
