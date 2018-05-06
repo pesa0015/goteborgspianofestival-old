@@ -1,6 +1,13 @@
 #releases {
     background: #F4EFEF;
     padding: 50px 0;
+    h1 {
+        font-size: 50px;
+        text-decoration: underline;
+        margin: 20px auto -10px auto;
+        width: 800px;
+        text-align: center;
+    }
     .release {
         width: 800px;
         margin: auto;
@@ -33,6 +40,13 @@
     }
 }
 @media (max-width: 968px) {
+    #releases {
+        h1 {
+            font-size: 30px;
+            margin: 70px auto -45px auto;
+            width: inherit;
+        }
+    }
     img {
         width: auto;
     }

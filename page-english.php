@@ -35,9 +35,6 @@ $translate = getTranslations();
         <h4><a href="<?php echo $home; ?>/program-2017" style="color: inherit;">Festivalprogram 2017</a></h4>
     </div>
 </div>
-<div id="releases">
-    <?php get_template_part('page_templates/press-releases', 'press-releases'); ?>
-</div>
 <div id="footer">
     <h1 id="sponsors-title" class="title">Sponsors</h1>
     <div id="sponsors">

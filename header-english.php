@@ -36,6 +36,9 @@ $year = programYear();
                     <a href="<?php bloginfo('home'); ?>"><?=$translate['home']; ?></a>
                 </li>
                 <li>
+                    <a href="<?php bloginfo('home'); ?>/nyheter"><?=$translate['news']; ?></a>
+                </li>
+                <li>
                     <a href="<?php echo $home; ?>/program-2017" class="go-to-program"><?=$translate['festivalprogram']; ?></a>
                 </li>
                 <li>
@@ -125,6 +128,7 @@ $year = programYear();
             <img src="<?php bloginfo('template_url'); ?>/img/menu.png" id="menu-icon" class="only-mobile" alt="">
             <ul>
                 <li class="menu-item"><a href="<?php bloginfo('home'); ?>/english"><?=str_replace(['<p>', '</p>'], '', $translate['home']); ?></a></li>
+                <li class="menu-item"><a href="<?php bloginfo('home'); ?>/nyheter"><?=$translate['news']; ?></a></li>
                 <li class="sub menu-item">
                     <span>
                         <?php $p = $home . '/#festivalprogram'; ?>
