@@ -59,6 +59,9 @@ $year = programYear();
                     <a href="#" class="sub-link"><?=$translate['signup_volonteers']; ?></a>
                 </li>
                 <li>
+                    <a href="<?php bloginfo('home'); ?>/sponsorer">Sponsorer</a>
+                </li>
+                <li>
                     <?php
                     $board_link = $translate['management_board_link'];
                     $board = $translate['management_board'];
@@ -156,14 +159,7 @@ $year = programYear();
                         </li>
                     </ul>
                 </li>
-                <li id="media" class="sub menu-item">
-                    <span>Media</span>
-                    <ul>
-                        <li>
-                            <a href="#" class="sub-link open-video">Video Pianofestival 2016</a>
-                        </li>
-                    </ul>
-                </li>
+                <li class="menu-item"><a href="<?php bloginfo('home'); ?>/sponsorer">Sponsors</a></li>
                 <li id="more" class="sub menu-item">
                     <span>Mer <img src="<?php bloginfo('template_url'); ?>/img/more.png" alt=""></span>
                     <ul>
@@ -176,6 +172,9 @@ $year = programYear();
                         <li>
                             <?php $management_board = $home . '/' . $translate['management_board_link']; ?>
                             <a href="<?php echo $management_board; ?>" class="sub-link"><?=$translate['management_board']; ?></a>
+                        </li>
+                        <li>
+                            <a href="#" class="sub-link open-video">Video Pianofestival 2016</a>
                         </li>
                     </ul>
                 </li>

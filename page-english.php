@@ -36,12 +36,6 @@ $translate = getTranslations();
     </div>
 </div>
 <div id="footer">
-    <h1 id="sponsors-title" class="title">Sponsors</h1>
-    <div id="sponsors">
-        <div class="sponsors">
-            <?php get_template_part('page_templates/sponsors', 'sponsors'); ?>
-        </div>
-    </div>
     <h1 id="partners-title" class="title">Partners</h1>
     <div id="partners">
         <span class="partner">Världskulturmuseet</span>
