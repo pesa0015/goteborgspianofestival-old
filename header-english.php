@@ -128,7 +128,7 @@ $year = programYear();
                     <img src="<?php bloginfo('template_url'); ?>/img/flags/sv.png" class="flag" data-lang="sv" alt="">
                 </a>
             </div>
-            <img src="<?php bloginfo('template_url'); ?>/img/menu.png" id="menu-icon" class="only-mobile" alt="">
+            <img src="<?php bloginfo('template_url'); ?>/img/menu-red.png" id="menu-icon" class="only-mobile" alt="">
             <ul>
                 <li class="menu-item"><a href="<?php bloginfo('home'); ?>/english"><?=str_replace(['<p>', '</p>'], '', $translate['home']); ?></a></li>
                 <li class="menu-item"><a href="<?php bloginfo('home'); ?>/nyheter"><?=$translate['news']; ?></a></li>
@@ -161,7 +161,7 @@ $year = programYear();
                 </li>
                 <li class="menu-item"><a href="<?php bloginfo('home'); ?>/sponsorer">Sponsors</a></li>
                 <li id="more" class="sub menu-item">
-                    <span>Mer <img src="<?php bloginfo('template_url'); ?>/img/more.png" alt=""></span>
+                    <span>Mer <img src="<?php bloginfo('template_url'); ?>/img/more-red.png" alt=""></span>
                     <ul>
                         <li>
                             <a href="#" class="sub-link open-modal" data-modal="contact"><?=$translate['contact']; ?></a>

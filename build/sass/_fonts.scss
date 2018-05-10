@@ -49,3 +49,15 @@
        url($themeName + '/fonts/PT-Serif-regular/PT-Serif-regular.ttf') format('truetype'),
        url($themeName + '/fonts/PT-Serif-regular/PT-Serif-regular.svg#PTSerif') format('svg');
 }
+@font-face {
+  font-family: 'Assistant Light';
+  font-weight: 300;
+  font-style: normal;
+  src: url($themeName + '/fonts/Assistant/Assistant-Light.ttf');
+}
+@font-face {
+  font-family: 'Assistant Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: url($themeName + '/fonts/Assistant/Assistant-Regular.ttf');
+}
