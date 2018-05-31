@@ -21,7 +21,7 @@ $category = get_category_by_slug($programYear);
 <div class="md-overlay white"></div>
 <h1 class="title"><?php echo $title; ?></h1>
 <?php
-$pdf = get_field('pdf', PAGE_PDF);
+$pdf = get_field('show_pdf', PAGE_PDF);
 if ($pdf) : ?>
 <div id="pdf">
     <a href="<?php echo home(); ?>/festivalprogram-pdf" target="_blank">
