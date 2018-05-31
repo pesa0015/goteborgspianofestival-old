@@ -30,6 +30,13 @@ gulp.task('css', function() {
         .pipe(gulp.dest('.'));
 });
 
+gulp.task('program-2018', function() {
+    return gulp.src('build/sass/program_styles-2018.scss')
+        .pipe(sass()).pipe(minifyCSS())
+        .pipe(concat('style-program-2018.min.css'))
+        .pipe(gulp.dest('.'));
+});
+
 gulp.task('program-2017', function() {
     return gulp.src('build/sass/program_styles-2017.scss')
         .pipe(sass()).pipe(minifyCSS())
@@ -58,10 +65,10 @@ gulp.task('vendor-css', function() {
 });
 
 gulp.task('watch', function() {
-    runSequence('css', 'vendor-css', 'program-2017', 'program-2016');
+    runSequence('css', 'vendor-css', 'program-2018', 'program-2017', 'program-2016');
     runSequence('js', 'vendor-js');
     watch('build/sass/*.scss', function() {
-        runSequence('css', 'vendor-css', 'program-2017', 'program-2016');
+        runSequence('css', 'vendor-css', 'program-2018', 'program-2017', 'program-2016');
     });
     watch('build/js/*.js', function() {
         runSequence('js', 'vendor-js');
