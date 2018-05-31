@@ -40,12 +40,15 @@ $translate = getTranslations();
 <div id="footer">
     <h1 id="partners-title" class="title">Samarbetspartners</h1>
     <div id="partners">
-        <span class="partner">Världskulturmuseet</span>
-        <span class="dot"></span>
         <span class="partner">Göteborgs konserthus</span>
         <span class="dot"></span>
         <span class="partner">GöteborgsOperan</span>
+        <span class="dot"></span>
+        <span class="partner">Svenska Balettskolan</span>
+        <span class="dot"></span>
+        <span class="partner">Dicksonska palatset</span>
     </div>
+    <img src="<?php bloginfo('template_url'); ?>/img/svenska_balettskolan.png" alt="" style="height: 200px; display: block; margin: 70px auto;">
     <div id="created-by">
         <span>
             <span id="created-by-title">Sidan skapades av</span>
@@ -53,8 +56,6 @@ $translate = getTranslations();
             <a href="http://goteborgspianofestival.com/" target="_blank">Göteborgs Pianofestival</a>
             <span class="dot"></span>
             <a href="http://petersall.se/" target="_blank">petersall.se</a>
-            <span class="dot"></span>
-            <a href="https://www.facebook.com/erickton.se" target="_blank">Erickton</a>
         </span>
     </div>
 </div>
