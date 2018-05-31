@@ -39,7 +39,7 @@ $year = programYear();
                     <a href="<?php bloginfo('home'); ?>/nyheter"><?=$translate['news']; ?></a>
                 </li>
                 <li>
-                    <a href="<?php echo $home; ?>/program-2017" class="go-to-program"><?=$translate['festivalprogram']; ?></a>
+                    <a href="<?php echo $home; ?>/program-2018" class="go-to-program"><?=$translate['festivalprogram']; ?></a>
                 </li>
                 <li>
                     <a href="#" class="sub-link open-video">Video <img src="<?php bloginfo('template_url'); ?>/img/video/youtube.png" alt=""></a>

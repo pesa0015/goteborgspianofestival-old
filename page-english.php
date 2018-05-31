@@ -32,7 +32,10 @@ $translate = getTranslations();
 </div>
 <div id="festivalprogram_anchor">
     <div class="title">
-        <h4><a href="<?php echo $home; ?>/program-2017" style="color: inherit;">Festivalprogram 2017</a></h4>
+        <h4><a href="<?php echo $home; ?>/program-2018" style="color: inherit;">Festivalprogram 2018</a>
+            <br />
+            <span><?php echo begins() . ' - ' . ends() . ' ' . $translate['august']; ?></span>
+        </h4>
     </div>
 </div>
 <div id="footer">
