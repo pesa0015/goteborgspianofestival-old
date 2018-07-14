@@ -10,7 +10,7 @@ if (!$fromModal) {
 <div id="thumbnails">
 <?php
 $p_id = ($fromModal) ? $id : get_queried_object_id();
-$posts = get_posts(array('category_name' => get_field('kategori', $p_id), 'orderby' => 'date', 'order' => 'asc', 'posts_per_page' => 10));
+$posts = get_posts(array('category_name' => get_field('kategori', $p_id), 'orderby' => 'date', 'order' => 'desc', 'posts_per_page' => 10));
 if ($posts): foreach ($posts as $post): ?>
 <div id="thumbnail-<?php echo $post->post_name; ?>" class="thumbnail">
 	<img src="<?php the_field('bild', $post->ID); ?>" alt="">
@@ -26,7 +26,7 @@ if ($posts): foreach ($posts as $post): ?>
 	<?php endif; ?>
 	<p id="p"><?php the_field('text_' . $_SESSION['lang'], $p_id); ?></p>
 </div>
-<?php if ($posts): $reversed_posts = array_reverse($posts); foreach($reversed_posts as $post): ?>
+<?php if ($posts): foreach ($posts as $post): ?>
 <div id="<?php echo $post->post_name; ?>" class="pedagog">
 	<img src="<?php the_field('bild', $post->ID); ?>" alt="">
 	<h1 class="name"><?php the_field('namn', $post->ID); ?></h1>
