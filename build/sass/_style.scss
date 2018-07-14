@@ -167,6 +167,11 @@ body {
 	text-align: center;
 	margin: auto;
 }
+@media (max-width: 900px) {
+    #thumbnails {
+        margin: 103px auto 0 auto;
+    }
+}
 .thumbnail {
 	display: inline-block;
 	margin: 30px;
