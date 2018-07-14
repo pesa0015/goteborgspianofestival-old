@@ -17,21 +17,20 @@ h1 {
 @media (max-width: 968px) {
     .board-left {
         position: absolute;
-        margin-top: 65%;
-        margin-bottom: 65px;
+        margin: 70% 0 65px 0;
     }
     .board-right {
-        // float: none;
+        float: none;
         position: relative;
         width: 100%;
+        img {
+            width: 100%;
+        }
     }
     #content-board {
         width: 80%;
     }
     h1 {
         text-align: center;
-    }
-    img {
-        width: 100%;
     }
 }
