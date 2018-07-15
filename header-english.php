@@ -33,10 +33,13 @@ $year = programYear();
         <div class="md-content">
             <ul>
                 <li>
-                    <a href="<?php bloginfo('home'); ?>"><?=$translate['home']; ?></a>
+                    <a href="<?php echo $home; ?>"><?=$translate['home']; ?></a>
                 </li>
                 <li>
-                    <a href="<?php bloginfo('home'); ?>/nyheter"><?=$translate['news']; ?></a>
+                    <a href="<?php echo $home; ?>/nyheter"><?=$translate['news']; ?></a>
+                </li>
+                <li>
+                    <a href="<?php echo $home; ?>/artister-2018"><?=$translate['artists']; ?></a>
                 </li>
                 <li>
                     <a href="<?php echo $home; ?>/program-2018" class="go-to-program"><?=$translate['festivalprogram']; ?></a>
@@ -59,14 +62,14 @@ $year = programYear();
                     <a href="#" class="sub-link"><?=$translate['signup_volonteers']; ?></a>
                 </li>
                 <li>
-                    <a href="<?php bloginfo('home'); ?>/sponsorer">Sponsorer</a>
+                    <a href="<?php echo $home; ?>/sponsorer">Sponsorer</a>
                 </li>
                 <li>
                     <?php
                     $board_link = $translate['management_board_link'];
                     $board = $translate['management_board'];
                     ?>
-                    <a href="<?php bloginfo('home'); ?>/<?php echo $board_link; ?>"><?php echo $board; ?></a>
+                    <a href="<?php echo $home; ?>/<?php echo $board_link; ?>"><?php echo $board; ?></a>
                 </li>
                 <li>
                     <a href="#" class="open-modal" data-modal="contact"><?=$translate['contact']; ?></a>
@@ -121,7 +124,7 @@ $year = programYear();
     <header>
         <nav>
             <div id="logo">
-                <a href="<?php bloginfo('home'); ?>/english"><?=$translate['gothenburg'] . $logo; ?></div></a>
+                <a href="<?php echo $home; ?>/english"><?=$translate['gothenburg'] . $logo; ?></div></a>
             </div>
             <div id="flags">
                 <a href="<?php echo $home; ?>">
@@ -130,8 +133,8 @@ $year = programYear();
             </div>
             <img src="<?php bloginfo('template_url'); ?>/img/menu-red.png" id="menu-icon" class="only-mobile" alt="">
             <ul>
-                <li class="menu-item"><a href="<?php bloginfo('home'); ?>/english"><?=str_replace(['<p>', '</p>'], '', $translate['home']); ?></a></li>
-                <li class="menu-item"><a href="<?php bloginfo('home'); ?>/nyheter"><?=$translate['news']; ?></a></li>
+                <li class="menu-item"><a href="<?php echo $home; ?>/english"><?=str_replace(['<p>', '</p>'], '', $translate['home']); ?></a></li>
+                <li class="menu-item"><a href="<?php echo $home; ?>/artister-2018"><?=$translate['artists']; ?></a></li>
                 <li class="sub menu-item">
                     <span>
                         <?php $p = $home . '/#festivalprogram'; ?>
@@ -145,6 +148,7 @@ $year = programYear();
                         <?php endforeach; ?>
                     </ul>
                 </li>
+                <li class="menu-item"><a href="<?php echo $home; ?>/nyheter"><?=$translate['news']; ?></a></li>
                 <li id="participate" class="sub menu-item">
                     <span><?=$translate['signup']; ?></span>
                     <ul id="signup">
@@ -159,7 +163,7 @@ $year = programYear();
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="<?php bloginfo('home'); ?>/sponsorer">Sponsors</a></li>
+                <li class="menu-item"><a href="<?php echo $home; ?>/sponsorer">Sponsors</a></li>
                 <li id="more" class="sub menu-item">
                     <span>Mer <img src="<?php bloginfo('template_url'); ?>/img/more-red.png" alt=""></span>
                     <ul>

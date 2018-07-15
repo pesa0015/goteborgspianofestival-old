@@ -47,7 +47,7 @@ function ends() {
 }
 
 function home() {
-    return get_bloginfo('home');
+    return home_url();
 }
 
 function getForm($name)
