@@ -11,7 +11,7 @@ if (!$fromModal) {
 <?php
 $p_id = ($fromModal) ? $id : get_queried_object_id();
 $page = get_post();
-$posts = get_posts(array('category_name' => get_field('kategori', $p_id), 'orderby' => 'date', 'order' => 'desc', 'posts_per_page' => 10));
+$posts = get_posts(array('category_name' => get_field('kategori', $p_id), 'orderby' => 'date', 'order' => 'desc', 'posts_per_page' => 15));
 if ($posts): foreach ($posts as $post): ?>
 <a href="/<?php echo $page->post_name . '#' . $post->post_name; ?>">
 <div id="thumbnail-<?php echo $post->post_name; ?>" class="thumbnail">
