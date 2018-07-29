@@ -61,3 +61,9 @@
   font-style: normal;
   src: url($themeName + '/fonts/Assistant/Assistant-Regular.ttf');
 }
+@font-face {
+  font-family: 'Assistant SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  src: url($themeName + '/fonts/Assistant/Assistant-SemiBold.ttf');
+}
