@@ -1,6 +1,6 @@
 $('.flexslider').flexslider({
    	animation: 'fade',
-    slideshowSpeed: 3000,
+    slideshowSpeed: 7000,
     start: function(){
         placeId = document.getElementsByClassName('flex-active-slide')[0].getAttribute('data-place');
         document.getElementById('place-' + placeId).className = 'active-place';
