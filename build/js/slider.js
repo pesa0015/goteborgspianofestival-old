@@ -99,7 +99,7 @@ $('.tooltip').tooltipster({
 function linkify(text) {
   var urlRegex = new RegExp("([a-zA-Z0-9]+://)?([a-zA-Z0-9_]+:[a-zA-Z0-9_]+@)?([a-zA-Z0-9.-]+\\.[A-Za-z]{2,4})(:[0-9]+)?(/.*)?");
   return text.replace(urlRegex, function(url) {
-    return '<a href="//' + url + '" target="_blank">' + url + '</a>';
+    return '<a href="http://' + url + '" target="_blank">' + url + '</a>';
   });
 }
 var cv = document.getElementsByClassName('cv-text');
