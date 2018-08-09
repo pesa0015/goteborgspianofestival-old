@@ -4,7 +4,7 @@ header {
     width: 100%;
     position: fixed;
     border-bottom: 3px solid $secondaryColor;
-    margin-top: -103px;
+    margin-top: -90px;
     z-index: 3;
 }
 #logo {
@@ -17,6 +17,11 @@ header {
     a {
        color: inherit;
        text-decoration: none;
+       img {
+            background-color: $secondaryColor;
+            height: 80px;
+            padding: 10px;
+       }
     }
 }
 #piano {
@@ -75,7 +80,7 @@ header {
         list-style: none;
         display: inline-block;
         float: right;
-        margin: 20px 10% 20px 50px;
+        margin: 40px 10% 20px 50px;
         padding: 0;
         line-height: 60px;
     }

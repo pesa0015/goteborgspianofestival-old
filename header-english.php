@@ -118,7 +118,7 @@ $year = programYear();
     <header>
         <nav>
             <div id="logo">
-                <a href="<?php echo $home; ?>/english"><?=$translate['gothenburg'] . $logo; ?></div></a>
+                <a href="<?php echo $home; ?>/english"><img src="<?php the_field('logo', 1312); ?>"></a>
             </div>
             <div id="flags">
                 <a href="<?php echo $home; ?>">
