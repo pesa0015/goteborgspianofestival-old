@@ -75,7 +75,7 @@ $year = programYear();
                     <a href="<?php echo $home; ?>/<?php echo $board_link; ?>"><?php echo $board; ?></a>
                 </li>
                 <li>
-                    <a href="#" class="open-modal" data-modal="contact"><?=$translate['contact']; ?></a>
+                    <a href="<?php echo $home; ?>/kontakta-oss"><?=$translate['contact']; ?></a>
                 </li>
             </ul>
         </div>
@@ -102,12 +102,6 @@ $year = programYear();
         <div class="md-content">
             <button class="close-modal">Stäng</button>
             <?php echo getForm('Anmälan - Volontärer'); ?>
-        </div>
-    </div>
-    <div id="modal-contact" class="md-modal md-effect-1">
-        <div class="md-content">
-            <button class="close-modal">Stäng</button>
-            <?php echo getForm('Kontakt'); ?>
         </div>
     </div>
     <div id="modal-member" class="md-modal md-effect-1">
@@ -171,7 +165,7 @@ $year = programYear();
                     <span>Mer <img src="<?php bloginfo('template_url'); ?>/img/more-red.png" alt=""></span>
                     <ul>
                         <li>
-                            <a href="#" class="sub-link open-modal" data-modal="contact"><?=$translate['contact']; ?></a>
+                            <a href="<?php echo $home; ?>/kontakta-oss" class="sub-link" data-modal="contact"><?=$translate['contact']; ?></a>
                         </li>
                         <li>
                             <a href="#" class="sub-link open-modal" data-modal="member"><?=$translate['member']; ?></a>
